@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>配置编辑页面</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({template: "platMain"});
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form_box">
+    <div class="page_title">
+        <h1>配置基本信息</h1>
+    </div>
+    <table class="form" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <th><b>*</b>名称</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelConfig" data-property="name"/>
+                </div>
+            </td>
+            <th><b>*</b>编码</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelConfig" data-property="code"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>默认值</th>
+            <td colspan="3">
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelConfig" data-property="value"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>描述</th>
+            <td colspan="3">
+                <textarea class="i_textarea" data-model="ModelConfig" data-property="description"
+                          onblur="textareachk(this,'bzs')" onkeyup="textareachk(this,'bzs')">
+                </textarea>
+                <div class="txtword" id="bzs"></div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- 下面按钮 -->
+<div class="w_button_box">
+    <input type="button" id="save" value="保存" class="c_button"/>
+</div>
+<script type="text/javascript">
+    RX.load({
+        template: "form",
+        module: [
+            "/medias/src/plat/conf/config/configEdit_config.js",
+            "/medias/src/plat/code/config/configEdit.js"]
+    });
+</script>
+</body>
+</html>

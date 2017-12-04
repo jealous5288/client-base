@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>字典列表页面</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+
+    <script type="text/javascript">
+        RX.loadCSS({template: "platMain"});
+        $(function () {
+            $.MyCommon.PageLoading({ sleep: 200});
+        })
+    </script>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="base_box">
+    <div class="operation_box">
+        <ul class="action_button">
+            <li><a href="#none" id="add"><i class="iconfont">&#xe62a;</i>新增</a></li>
+            <li><a href="#none" id="edit"><i class="iconfont">&#xe605;</i>修改</a></li>
+            <li><a href="#none" id="del"><i class="iconfont ">&#xe606;</i>删除</a></li>
+            <li><a href="#none" id="allJspath"><i class="iconfont ">&#xe62a;</i>生成所有字典</a></li>
+        </ul>
+    </div>
+    <div data-model="SDict" class="query_box"></div>
+
+    <div class="list_box">
+        <div data-model="ModelDictList" title="字典列表"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    RX.load({
+        template: "grid",
+        module: ["/medias/src/plat/conf/dictionary/dictList_config.js",
+            "/medias/src/plat/code/dictionary/dictList.js"]
+    });
+</script>
+</body>
+</html>

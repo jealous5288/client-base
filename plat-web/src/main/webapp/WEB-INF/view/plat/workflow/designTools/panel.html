@@ -1,0 +1,57 @@
+<html xmlns:v>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+    <title>基础平台</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({module: ["/medias/style/plat/workflow/flow.css", "operamasks"]});
+    </script>
+    <style>
+        html, body {
+            font-size: 12px;
+            padding: 0;
+            margin: 0;
+            overflow: auto;
+            height: 100%;
+        }
+
+        a {
+            font-size: 12px;
+        }
+
+        fieldset {
+            font-size: 12px;
+        }
+
+        form {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body style="margin:0px;">
+<div id="canvas" class="canvas" tabindex="0" style="margin: 0;height: 99%;"></div>
+
+<div id="dialog-containers" style="display:block"></div>
+
+<div id="menu_flow" style="border: 1px solid gray; width: 100px;display: none;"></div>
+
+<div id="menu_node" style="border: 1px solid gray; width: 100px;display: none;"></div>
+
+<div id="menu_router" style="border: 1px solid gray; width: 100px;display: none;"></div>
+<script type="text/javascript">
+    RX.load({
+        module: ["jquery", "formUtils",
+            "/medias/lib/flow/elements.js", "/medias/lib/flow/flow.js", "/medias/lib/flow/shape.js",
+            "/medias/lib/flow/rect.js", "/medias/lib/flow/oval.js", "/medias/lib/flow/node/judge_node.js",
+            "/medias/lib/flow/node/start_node.js", "/medias/lib/flow/node/end_node.js", "/medias/lib/flow/node/read_node.js",
+            "/medias/lib/flow/node/nested_node.js","/medias/lib/flow/router.js", "/medias/lib/flow/node/activity_node.js", "/medias/lib/flow/panel.js",
+            "/medias/lib/flow/raphael.js", "/medias/lib/jquery.json-2.3.min.js", "/medias/lib/flow/flow.property.js",
+            "/medias/lib/store+json2.min.js", "operamasks",
+            "/medias/src/plat/code/workflow/designTools/panel.js"
+        ]
+    });
+</script>
+</body>
+</html>

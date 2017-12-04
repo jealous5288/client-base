@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            template: "platMain"
+        });
+    </script>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="operation_box">
+    <ul class="action_button">
+        <li><a href="#none" id="add">新增</a></li>
+        <li><a href="#none" id="stop">停止</a></li>
+    </ul>
+</div>
+<div class="list_box">
+    <div data-model="ModelEntrustList" title="委办列表"></div>
+</div>
+<script type="text/javascript">
+    RX.load({
+        template: "grid",
+        module: [
+            "/medias/src/plat/code/workflow/instance/entrustList_config.js",
+            "/medias/src/plat/code/workflow/instance/entrustList.js"]
+    });
+</script>
+</body>
+</html>

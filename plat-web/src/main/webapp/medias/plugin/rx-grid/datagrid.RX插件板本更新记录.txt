@@ -1,0 +1,36 @@
+2013-08-02
+1、新增扩展方法：setSelected,供项目载入页面时选中数据记录
+2、新增列表数据加载时的loading提醒弹窗及遮罩
+
+2013-08-13
+1、修改动态获得表头列模型时展开行详情的colspan错误的bug
+2、修改有checkbox情况下，单选时候表头应该没有checkbox的bug
+
+2013-08-14
+1、增加新功能：为grid增加自动序号  新增初始化属性：ordinal,默认为false
+
+
+2013-08-22
+1、点击分页增加 传递总页数，totalNum参数
+2、点击分页保留选中状态(用于批量提交)，增加options参数allPageChose：false 默认不开启全页选择
+
+2013-08-28
+1、修改getSelected方法，增加try｛｝catch（）｛｝捕获异常情况
+
+2013-09-30
+1、增加datagrid.RX.newPagenate.js实现新的分页样式
+2、datagrid.RX.1.1.css增加样式代码支持新的分页样式
+
+2013-11-4
+1、增加双击事件onRowDblClick
+2、增加table完全载入后事件onLoadAfter
+3、增加隔行颜色
+
+2013-11-28
+1、修改reload方法，自动生成序号问题。
+
+2013-12-09
+2、修改reload方法，增加是否分页的判断。
+
+2016-02-16
+1.添加新的分页模式（上下页翻页，默认使用新的分页模式fastPagenate:true）

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            template: "platMain",
+            module: ["tabPanelJb", "/medias/style/plat/workflow/myStyle.css"]
+        });
+    </script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .mytable TH {
+            font-weight: normal;
+        }
+
+        #sheets td, #vars td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="bage-box">
+    <div class="title2">
+        <!--<h1 id="hTitle"></h1>-->
+        <div class="button-Box" id="buttons">
+            <button class="btn" id="submit" style="display:none;"><i class="iconfont ">&#xe62f;</i><span id="subSpan">提交</span></button>
+            <button class="btn" id="refuse" style="display:none;"><i class="iconfont ">&#xe614;</i>退回</button>
+            <button class="btn" id="save" style="display:none;"><i class="iconfont ">&#xe60e;</i><span id="saveSpan">保存</span></button>
+            <button class="btn" id="saveDraft" style="display:none;"><i class="iconfont ">&#xe60e;</i>草稿</button>
+            <button class="btn" id="cancel" style="display:none;"><i class="iconfont ">&#xe648;</i>撤回</button>
+            <button class="btn" id="delete" style="display:none;"><i class="iconfont ">&#xe607;</i>删除</button>
+            <button class="btn" id="view" style="display:none;"><i class="iconfont ">&#xe639;</i>流程图</button>
+            <button class="btn" id="specialBack" style="display:none;"><i class="iconfont ">&#xe639;</i>特送退回</button>
+            <button class="btn" id="close">关闭</button>
+        </div>
+    </div>
+    <div id="sheetlist" style="overflow:hidden;">
+        <div id="center-tab" style="position: relative;height: 100%">
+        </div>
+        <div style="overflow:hidden">
+        </div>
+    </div>
+    <div class="bottomTips" id="bottomTips" style="display: none">
+        <b>点击查看流程处理意见</b>
+    </div>
+    <div class="bottomPanel" id="bottomPanel" style="overflow:hidden">
+        <iframe id="opinionIframe" src="/plat/workflow/instance/opinionTable" frameborder="0" width="100%"
+                height="100%"></iframe>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    RX.load({
+        module: ["jquery", "json2", "tabPanel", "mathUuid", "workflow", "jqueryUrl", "formUtils", "validate",
+            "/medias/src/plat/code/workflow/instance/taskHandle.js"]
+    });
+</script>
+</html>

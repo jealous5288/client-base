@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <title>活动环节</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            template: "platFlow",
+            module: ["operamasks", "zTree",
+                "/medias/style/plat/workflow/flow.css",
+                "/medias/style/plat/workflow/myStyle.css",
+                "/medias/style/plat/workflow/flowPropertyEdit.css"]
+        });
+    </script>
+</head>
+
+<body>
+<table border="0" cellborder="0" cellspance="0" class="titleBar">
+    <col width="60px"/>
+    <col/>
+    <tr>
+        <div class="element_box">
+            <th>环节名称</th>
+            <td><input type="text" class="i_text" data-model="ModelActivityNode" data-property="name"/></td>
+        </div>
+    </tr>
+</table>
+
+<div id="center-tab">
+    <ul>
+        <li><a href="#tab5">环节设置</a></li>
+        <li><a href="#tab1">办理人</a></li>
+        <li><a href="#tab6">环节表单</a></li>
+        <!--<li><a href="#tab8">流程变量</a></li>-->
+        <li><a href="#tab3">前处理</a></li>
+        <li><a href="#tab4">后处理</a></li>
+        <li><a href="#tab9">自动办理</a></li>
+        <li><a href="#tab10">个性设置</a></li>
+    </ul>
+
+    <div id="tab5">
+        <fieldset class="fieldset" style="padding-top:0">
+            <legend>环节设置</legend>
+            <table cellpadding="0" cellspacing="0" border="0" class="form" style="width:auto">
+                <col width="120px"/>
+                <col width="180px"/>
+                <tr>
+                    <th>环节序号：</th>
+                    <td>
+                        <div class="element_box">
+                            <label><input data-model="ModelActivityNode" data-property="nodeSort"
+                                          type="text"
+                                          class="i_text"/></label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            </br>
+            <table cellpadding="0" cellspacing="0" border="0" class="form" style="width:auto">
+                <col width="120px"/>
+                <col width="180px"/>
+                <tr>
+                    <th>多人办理方式：</th>
+                    <td>
+                        <label><input name="transactType" data-model="ModelActivityNode" data-property="transactType"
+                                      type="radio" value="0"/>抢占式</label>
+                        <label><input name="transactType" data-model="ModelActivityNode" data-property="transactType"
+                                      type="radio" value="1"/>会签式</label>
+                    </td>
+
+                </tr>
+            </table>
+            <br>
+            <table cellpadding="0" cellspacing="0" border="0" class="form" style="width:auto;display: none" id="hqfs">
+                <col width="120px"/>
+                <col width="90px"/>
+                <col width="120px"/>
+                <col width="90px"/>
+                <tr>
+                    <th>会签方式：</th>
+                    <td>
+                        <div class="element_box">
+                            <select data-model="ModelActivityNode" data-property="countersignParameter"
+                                    class="i_select">
+                                <!--style="margin-left:10px;">-->
+                                <!--<option value="0">全部</option>-->
+                                <!--<option value="1">比例</option>-->
+                                <!--<option value="2">固定</option>-->
+                            </select>
+                        </div>
+                    </td>
+                    <th>会签参数值：</th>
+                    <td>
+                        <div class="element_box">
+                            <input type="text" class="i_text" data-model="ModelActivityNode"
+                                   data-property="countersignValue" style="width: 100px"/>
+                        </div>
+                    </td>
+
+                </tr>
+            </table>
+            <br>
+            <table cellpadding="0" cellspacing="0" border="0" class="form" style="display: none">
+                <col width="120px"/>
+                <col width="90px"/>
+                <col width="90px"/>
+                <col width="80px"/>
+                <tr>
+                    <th>选择聚合方式：</th>
+                    <td>
+                        <div class="element_box"><label><input name="convergeType" data-model="ModelActivityNode"
+                                                               data-property="convergeType"
+                                                               type="radio" value="0"/> 同步聚合</label></div>
+                    </td>
+                    <td>
+                        <div class="element_box"><label><input name="convergeType" data-model="ModelActivityNode"
+                                                               data-property="convergeType"
+                                                               type="radio" value="1"/> 异步聚合</label></div>
+                    </td>
+                    <td>
+                        <div class="element_box"><label><input name="convergeType" data-model="ModelActivityNode"
+                                                               data-property="convergeType"
+                                                               type="radio" value="2"/> 无聚合</label></div>
+                    </td>
+                </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" border="0" class="form" style="width:auto">
+                <col width="120px"/>
+                <col width="180px"/>
+                <tr>
+                    <th>不同意跳转至：</th>
+                    <td><label> <select class="selecta" data-model="ModelActivityNode"
+                                        data-property="disagreeNodeDomid"/>
+                        <option value=""></option>
+                        </select></label></td>
+                </tr>
+            </table>
+            </br>
+            <table cellpadding="0" cellspacing="0" border="0" class="form" style="width:auto">
+                <col width="120px"/>
+                <col width="90px"/>
+                <col width="90px"/>
+                <tr>
+                    <th>是否显示保存按钮：</th>
+                    <td><label><input name="sfxsbc" data-model="ModelActivityNode" data-property="sfxsbc" type="radio"
+                                      value="1"/> 显示</label></td>
+                    <td><label><input name="sfxsbc" data-model="ModelActivityNode" data-property="sfxsbc" type="radio"
+                                      value="0"/> 不显示</label></td>
+            </table>
+            </br>
+            <table cellpadding="0" cellspacing="0" border="0" class="infoTable_gzl" style="width:auto">
+                <col width="120px"/>
+                <col width="180px"/>
+                <tr>
+                    <th>环节业务状态：</th>
+                    <td><label> <select class="i_select" data-model="ModelActivityNode" data-property="ywzt"/>
+                        </select></label></td>
+                </tr>
+            </table>
+            </br></br></br>
+            <!--<table cellpadding="0" cellspacing="0" border="0" class="form" style="width:auto">-->
+            <!--<col width="120px"/><col width="70px"/><col width="70px"/>-->
+            <!--<tr>-->
+            <!--<th>是否必须上传附件：</th>-->
+            <!--<td><label><input name="sfbxscfj" data-model="ModelActivityNode" data-property="sfbxscfj" type="radio" value="0"/> 不必须</label></td>-->
+            <!--<td><label><input name="sfbxscfj" data-model="ModelActivityNode" data-property="sfbxscfj" type="radio" value="1"/> 必须</label></td>-->
+            <!--</table>-->
+        </fieldset>
+    </div>
+
+    <div id="tab1" class="flowTab" style="padding:0;">
+        <fieldset class="fieldset" style="float:left;width:680px;margin: 5px">
+            <legend>选择环节办理角色</legend>
+            <table cellpadding="0" cellspacing="0" border="0" class="form" style="width: auto;">
+                <col width="120px"/>
+                <col width="170px"/>
+                <col width="120px"/>
+                <col width="150px"/>
+                <col width="120px"/>
+                <col width="150px"/>
+                <tr>
+                    <th>角色名称：</th>
+                    <td>
+                        <div class="element_box">
+                            <input type="text" class="i_text" data-model="ModelActivityNode"
+                                   style="width:140px" data-property="roleName"/>
+                        </div>
+                    </td>
+                    <th>角色代码：</th>
+                    <td>
+                        <div class="element_box">
+                            <input type="text" class="i_text" data-model="ModelActivityNode" data-property="roleCode"/>
+                        </div>
+                    </td>
+                    <th>角色类别：</th>
+                    <td>
+                        <div class="element_box">
+                            <input type="text" class="i_text" data-model="ModelActivityNode"
+                                   data-property="roleTypeName"/></div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <table cellpadding="0" cellspacing="0" border="0" class="form"
+               style="float:left;width: 80px;padding: 7px;">
+            <tr style="height:25px;">
+                <td><input type="button" value="新建角色" class="button" id="addRole"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="修改角色" class="button" id="editRole"/></td>
+            </tr>
+        </table>
+        <fieldset class="fieldset" style="width:98%;padding: 5px 0;margin: 5px auto 0 auto;height:310px;">
+            <legend>角色相关要素</legend>
+            <iframe id='roleElementFrame' src='' frameborder="0"
+                    width="100%" height="100%" scrolling="no"></iframe>
+        </fieldset>
+    </div>
+
+    <div id="tab3">
+        <fieldset class="fieldset">
+            <legend>前处理程序操作</legend>
+            <textarea class="i_textarea" data-model="ModelActivityNode" data-property="startupProcessSql" cols="20"
+                      rows="2"
+                      style="height:155px;"></textarea>
+        </fieldset>
+    </div>
+
+    <div id="tab4">
+        <fieldset class="fieldset">
+            <legend>后处理程序操作</legend>
+            <textarea class="i_textarea" data-model="ModelActivityNode" data-property="finishProcessSql" cols="20"
+                      rows="2"
+                      style="height:155px;"></textarea>
+        </fieldset>
+    </div>
+
+
+    <div id="tab6">
+        <fieldset class="fieldset">
+            <legend>环节表单</legend>
+            <div id="sheetTableView">
+            </div>
+        </fieldset>
+    </div>
+
+    <div id="tab9">
+        <fieldset class="fieldset">
+            <legend>自动办理操作</legend>
+            <textarea class="i_textarea" data-model="ModelActivityNode" data-property="autoHandleSql" cols="20" rows="2"
+                      style="height:155px;"></textarea>
+        </fieldset>
+    </div>
+    <div id="tab10">
+        <fieldset class="fieldset">
+            <legend>个性化配置</legend>
+            <table cellpadding="0" cellspacing="0" border="0" class="infoTable_gzl" style="width: 100%;">
+                <col width="120px"/>
+                <col width="160px"/>
+                <col width="120px"/>
+                <col width="160px"/>
+                <col/>
+                <tr>
+                    <th>提交按钮显示名称：</th>
+                    <td><input type="text" class="i_text" data-model="ModelActivityNode" data-property="submitName"/>
+                    </td>
+                    <th>保存按钮显示名称：</th>
+                    <td><input type="text" class="i_text" data-model="ModelActivityNode" data-property="saveName"/></td>
+                </tr>
+            </table>
+            <br><br><br>
+            <div>
+                <div id="buttonTableView">
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <!--<div id="tab8">-->
+    <!--<fieldset class="fieldset">-->
+    <!--<legend>修改流程变量</legend>-->
+    <!--<table cellpadding="0" cellspacing="0" border="0" id="variableTableView" class="list">-->
+    <!--</table>-->
+    <!--</fieldset>-->
+    <!--</div>-->
+</div>
+<div class="buttons">
+    <div>
+        <input type="submit" value="确定" class="ombtn" id="save"/>
+        <input type="button" value="取消" class="ombtn" id="cancel"/>
+    </div>
+</div>
+<script type="text/javascript">
+    RX.load({
+        template: "form",
+        module: ["zTree", "operamasks", "flowProp",
+            "/medias/src/plat/conf/workflow/designTools/activityNodeEdit_Conf.js",
+            "/medias/src/plat/conf/workflow/designTools/activityNodeEdit.js"
+        ]
+    });
+</script>
+</body>
+</html>

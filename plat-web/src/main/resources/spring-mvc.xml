@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- Spring 获取配置文件中定义的bean -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <!-- 开启注解支持 -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes" value="text/plain;charset=UTF-8"/>
+            </bean>
+            <bean class="net.ruixin.util.converter.MyJsonConverter">
+            </bean>
+        </mvc:message-converters>
+        <mvc:argument-resolvers>
+            <bean class="net.ruixin.util.resolver.MethodArgumentsJsonResolver"></bean>
+            <bean class="net.ruixin.util.resolver.SearchArgumentsResolver"></bean>
+            <bean class="net.ruixin.util.resolver.NotPageSearchResolver"></bean>
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
+    <!-- 开启自动扫描 -->
+    <context:component-scan base-package="net.ruixin.controller"/>
+    <!-- 配置获取静态资源 -->
+    <mvc:resources mapping="medias/**" location="/medias/"/>
+    <!-- 文件上传下载配置-->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- set the max upload size100MB -->
+        <property name="maxUploadSize">
+            <value>104857600</value>
+        </property>
+        <property name="maxInMemorySize">
+            <value>4096</value>
+        </property>
+    </bean>
+    <!--beetl视图解析器-->
+    <bean id="beetlConfig" class="org.beetl.ext.spring.BeetlGroupUtilConfiguration" init-method="init">
+        <property name="root" value="/WEB-INF/view/" />
+    </bean>
+    <bean id="viewResolver" class="org.beetl.ext.spring.BeetlSpringViewResolver">
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+        <property name="suffix" value=".html"/>
+        <property name="order" value="0"/>
+    </bean>
+</beans>

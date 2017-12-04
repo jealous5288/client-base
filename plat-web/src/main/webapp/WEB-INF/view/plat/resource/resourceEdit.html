@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>配置编辑页面</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({template: "platMain"});
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .content_wrap {
+        }
+
+        .explain {
+            color: red !important;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form_box">
+    <div class="page_title">
+        <h1>配置基本信息</h1>
+    </div>
+    <table class="form" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <th width="30%"><b>*</b>名称</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelResource" data-property="name"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th><b>*</b>编码</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelResource" data-property="code"/>
+                </div>
+            </td>
+        </tr>
+        <%if(isNotEmpty(config.parent)){%>
+        <tr>
+            <th>上级资源</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelResource" data-property="parentName"/>
+                </div>
+            </td>
+        </tr>
+        <%}%>
+        <%if(strutil.index(config.column,"url") > -1){%>
+        <tr>
+            <th>URL</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelResource" data-property="url"/>
+                </div>
+            </td>
+        </tr>
+        <%}%>
+        <%if(strutil.index(config.column,"icon") > -1){%>
+        <tr>
+            <th>图标</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelResource" data-property="icon"/>
+                </div>
+            </td>
+        </tr>
+        <%}%>
+        <%if(strutil.index(config.column,"bizType") > -1){%>
+        <tr>
+            <th>业务类型</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelResource" data-property="bizType"/>
+                </div>
+            </td>
+        </tr>
+        <%}%>
+        <tr>
+            <th>描述</th>
+            <td>
+                <textarea class="i_textarea" data-model="ModelResource" data-property="description"
+                          onblur="textareachk(this,'bzs')" onkeyup="textareachk(this,'bzs')">
+                </textarea>
+                <div class="txtword" id="bzs"></div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- 下面按钮 -->
+<div class="w_button_box">
+    <input type="button" id="save" value="保存" class="c_button"/>
+</div>
+<script type="text/javascript">
+    var config = ${json(config)};
+    var resourceDict = ${json(resourceDict)};
+    var resourceType = "${resourceType}";
+    RX.load({
+        template: "form",
+        module: [
+            "/medias/src/plat/conf/resource/resourceEdit_config.js",
+            "/medias/src/plat/code/resource/resourceEdit.js"
+        ]
+    });
+</script>
+</body>
+</html>

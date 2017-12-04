@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>配置编辑页面</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({template: "platMain"});
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form_box">
+    <div class="page_title">
+        <h1>消息类型基本信息</h1>
+    </div>
+    <table class="form" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <th><b>*</b>名称</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelMessageType" data-property="name"/>
+                </div>
+            </td>
+            <th><b>*</b>编码</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelMessageType" data-property="code"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>紧急程度</th>
+            <td>
+                <div class="element_box">
+                    <select class="i_select" data-model="ModelMessageType" data-property="urgentLevel"/>
+                </div>
+            </td>
+            <th>操作类型</th>
+            <td>
+                <div class="element_box">
+                    <select type="text" class="i_text" data-model="ModelMessageType" data-property="operateType"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>有效期限(天)</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelMessageType" data-property="validTime"/>
+                </div>
+            </td>
+            <th>跳转路径</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelMessageType" data-property="skipPath"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>跳转类型</th>
+            <td>
+                <div class="element_box">
+                    <select class="i_select" data-model="ModelMessageType" data-property="skipType"/>
+                </div>
+            </td>
+            <th  class="win_size">窗口大小</th>
+            <td  class="win_size">
+                <div class="element_box">
+                    <select class="i_select" data-model="ModelMessageType" data-property="winSize"/>
+                </div>
+            </td>
+
+        </tr>
+
+        <tr>
+            <th>描述</th>
+            <td colspan="3">
+                <textarea class="i_textarea" data-model="ModelMessageType" data-property="description"
+                          onblur="textareachk(this,'bzs')" onkeyup="textareachk(this,'bzs')">
+                </textarea>
+                <div class="txtword" id="bzs"></div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- 下面按钮 -->
+<div class="w_button_box">
+    <input type="button" id="save" value="保存" class="c_button"/>
+</div>
+<script type="text/javascript">
+    RX.load({
+        template: "form",
+        module: [
+            "/medias/src/plat/conf/message/messageTypeEdit_config.js",
+            "/medias/src/plat/code/message/messageTypeEdit.js"]
+    });
+</script>
+</body>
+</html>

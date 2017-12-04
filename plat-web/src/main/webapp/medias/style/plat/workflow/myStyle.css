@@ -1,0 +1,229 @@
+#north-panel{border:none;background: url("/plat/medias/images/plat/headBg.png") repeat-x;overflow: hidden;}
+
+#north-panel{border:none;background: url("/plat/medias/images/plat/headBg.png") repeat-x}
+
+#south-panel{  background-color:#d2e0f2;border:none;text-align: center; height: 26px; line-height: 24px; }
+
+.logo{height:60px;display: block;background:url("/plat/medias/images/plat/logo.png")  no-repeat;float: left;width: 460px}
+.logo1{height:60px;display: block;background:url("/plat/medias/images/plat/jckfpt.png")  no-repeat;float: left;width: 460px}
+.logo2{height:60px;display: block;background:url("/plat/medias/images/plat/htgl.png")  no-repeat;float: left;width: 460px}
+
+.om-borderlayout-region-west .om-borderlayout-region-header{
+	padding: 0px;
+	border: 0;
+	height: 28px;
+	line-height: 28px;
+	background: url("/plat/medias/images/plat/leftmenu_bg.jpg") repeat-x scroll 0 0 #FFFFFF;
+	border-top:1px solid #99A8BB;
+	border-right:1px solid #99A8BB;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.om-borderlayout-region-west .om-panel-body{
+	padding: 0;
+}
+.nav-panel {
+	padding: 0;
+	font-weight:bold;
+}
+.nav-panel div.nav-item{
+	line-height: 25px;
+	font-size: 13px;
+	font-weight: normal;
+	padding-left: 40px;
+	cursor: pointer;
+	list-style-type: none;
+}
+
+.treeDiv{width:200px;float:left;border-right:1px #86a3c4 solid; height:100%;overflow: auto;}
+.frDiv{float:left;margin-left:5px;padding:0; width:50%; margin-top:3px }
+
+
+.operateTreeDiv{float:left;border:1px #86a3c4 solid;border-left:none;border-top:none;height:100%;background-color:#f1f5f9}
+.operateTreeInnerDiv{width:100%;height:auto;float: left}
+
+ul.mag10{margin-top:10px;}
+
+
+.popBox{width:100%;margin:2px auto;padding-bottom:5px;font-size:12px;}
+
+
+.infoTable{ width:100%;background-color:#fff;border-collapse:collapse;margin-top:5px;font-size:12px;}
+.infoTable caption{font-size:12px;font-weight:bold;height:30px;line-height: 30px;}
+.infoTable th,.infoTable td{ height:24px;line-height:24px;text-align:left;border:1px solid #b8d0d6;padding:1px;}
+.infoTable th{border:1px solid #b8d0d6;color:#000;background-color:#ebf1f3;font-weight:normal;text-align:right;}
+
+
+.infoTable tr td span{width:99%;height:22px;line-height:22px;display:block;position:relative;float:left;border:1px solid #9ebee3;}
+.TextBox{width:99%;height:20px;line-height:20px;border:0 none;text-align:left;color:#000;position:absolute;left:0;top:0;z-index:0;float:left;margin:0;padding:0;}
+.TextBox2{ width:90%;height:20px;line-height:20px;border:0 none;text-align:left;color:#000;position:absolute;left:0;top:0;z-index:0;float:left;margin:0;padding:0;}
+.textarea{width:99%;height:80px;color:#000;border:1px solid #9ebee3;}
+.TextBox{width:98%;height:20px;line-height:20px;border:0 none;text-align:left;color:#000;position:absolute;left:0;top:0;z-index:0}
+.TextBox2{ width:85%;height:20px;line-height:20px;border:0 none;text-align:left;color:#000;position:absolute;left:0;top:0;z-index:0}
+.textarea{width:98%;height:80px;color:#000;border:1px solid #9ebee3;}
+.h215{height:215px;}
+.h188{height:188px;}
+.h134{height:134px;}
+.h50{height:40px;}
+.w20{width:20% !important;float:left;}
+.c1{ width:50%;float:left;}
+.c2{ width:49%;float:left;}
+
+.TextBoxa{width:98%; height:22px;line-height:22px;border:1px #9ebee3 solid; }
+span.txt{display:block;height:20px;line-height:20px;text-align:left;padding:0;position: relative;}
+
+
+span input{ border:0;}
+span select{border:0;}
+span.orgPic{background: url('/plat/medias/images/plat/application_go.png') 99.6% 2px no-repeat;}
+span.postPic{background: url('/plat/medias/images/plat/application_go.png') 99.6% 2px no-repeat;}
+span.positionPic{background: url('/plat/medias/images/plat/application_go.png') 99.6% 2px no-repeat;}
+span.openIco{background: url('/plat/medias/images/plat/menu.gif') 98% 4px no-repeat;cursor:pointer;}
+
+
+.popInfoDiv{width:65%;height:404px;float:left;padding:0; margin: 0; }
+.popTreeDiv{width:34%;height:302px;overflow:auto;float:right;padding-top:10px;background:url('/plat/medias/images/plat/tree_bg.png') left bottom repeat-x;border:1px solid #C8DAEC; }
+
+.clear{  font-size: 0px;  clear:both;height:2px;border-top:1px #86a3c4 solid; padding-bottom:10px; }        /*d0d9e9*/
+
+
+/*弹窗按钮栏*/
+.btnTopBar{width:100%;text-align: left;border-bottom:1px #86a3c4 solid;padding:2px 0 4px 0;}
+.dialogDiv{margin-top:1px}
+
+
+/*模仿弹窗按钮*/
+.btnBar{width:98%;text-align: right;border:none;padding-top:8px;float: left  }
+.pta{height:392px; }
+.bba{ padding:8px 0;  }
+
+
+.w025{width:24%;}
+.w075{width:75%;}
+.h291{height:291px;}
+.h345{height:345px;}
+.w060{width:60%;}
+.w040{width:38%;}
+.h197{height:197px;}
+.boxtitle{width:100%;height:20px;line-height:20px;text-align:center;font-size:12px;font-weight:bold;}
+.stylebox{margin:0;padding:0;width:100%;float:left;border-bottom:1px #86a3c4 solid}
+.h265{height:265px;}
+.h170{height:170px;}
+.h143{height:143px;}
+.h125{height:125px;}
+/*左侧菜单样式*/
+
+/*add by hd*/
+.ymcz{float: right;margin: 35px 10px 0 0; display: inline; }
+.ymcz li{float: left;display: inline;margin-left: 10px}
+.ymcz li a{float: left;display: block;color: #000;text-decoration: none;height: 26px;line-height: 26px}
+.ymcz li a:hover{}
+.ymcz li a img{float: left;display: block;;width: 16px;height: 16px;border: 0 none;margin: 3px 3px 0 0}
+
+/*end add*/
+
+
+
+/*
+.om-accordion ul li{ background:#187bb9;}
+.nav-panel{padding-top:5px; padding-bottom:10px; border-bottom:1px solid #9dbedc; background:#f5f6fa;}
+.nav-panel ul li{ border-bottom:1px solid #fff;background:#f5f6fa; }
+
+*/
+
+.om-accordion{padding:0;margin:0;background:#e5f2fa;  }
+.om-accordion ul li a{ border: 0; }
+
+.leftmenu,.secMenu{padding:0;margin:0; }
+.menu{ background: url('/plat/medias/images/plat/menu.gif') 15px 4px no-repeat; }
+.nav-panel{background:#fff; border: 0; }
+.leftmenu li,.secMenu li{line-height:23px; font-size:12px;display:block;width:100%;background:#fff; }
+.leftmenu li a{display:block;text-indent: 34px;font-weight: normal;text-decoration: none;color:#15428b;}
+.secMenu li a{text-indent:60px;background: url('/plat/medias/images/plat/menu.gif') 45px 10px no-repeat;text-decoration: none;color:#000;}
+.leftmenu li a.select{background-color:#e8edf3;color:#15428b;}
+.leftmenu li a.onhover{background-color:#f5f5f5;}
+.leftmenu li a:hover{cursor: pointer;}
+
+.arrow{ background: url('/plat/medias/images/plat/arrow-down.png') 15px 11px no-repeat;}
+.arrowRight{ background: url('/plat/medias/images/plat/arrow-right.png') 17px 9px no-repeat;}
+.leftmenu li a.arrow:hover,.leftmenu li a.arrowRight:hover{background-color:#fff;}
+
+.om-panel-header{background:#e5f2fa;}
+
+.om-borderlayout-region-header .om-panel-title{font-weight:bold;font-size:12px;text-indent:5px;color: #15428b}
+
+.w300{width:200px; background: #fff;  }
+
+
+/*底部按钮*/
+.btnDiv{text-align: center;float:left;}
+.errorImg{background:url("/plat/medias/images/plat/button/errorImg.gif");width:14px;height:14px;display:none;position: absolute;right:2px;top:4px;}
+.status-red{color:red;}
+.errorMsg{display:none;position:absolute;top:2px;right:0;padding:0 2px;margin-right:18px;height:16px;line-height:16px;color:#000;border:1px #ffa500 solid;background-color:#ffce73;}
+.searchPanel{  border: 1; padding: 0; margin: 0; padding: 10px 0px;  }
+.ConditionsForm{ }
+.ConditionsForm caption{font-size:16px;font-weight:bold;letter-spacing:2px;color:#19609d;background:#fff}
+.ConditionsForm tr td span{width:98%;height:20px;line-height:20px;border:1px solid #9ebee3;background:#fff;display:block;position:relative;float:left}
+.ConditionsForm tr td span a.Informationpopup{width:16px;height:16px; position:absolute;right:1px;top:2px;z-index:1}
+.ConditionsForm th{text-align:right;font-size:12px;padding-right:5px;font-weight:normal}
+.ConditionsForm tr,.from td{height:25px}
+
+.ConditionsForm2 caption{font-size:16px;font-weight:bold;letter-spacing:2px;color:#19609d;background:#fff}
+.ConditionsForm2 th{text-align:right;font-size:12px;padding-right:5px;font-weight:normal}
+.ConditionsForm2 tr{height:25px}
+.ConditionsForm2 td input.conForTxt{border:1px solid #9ebee3; height:20px;line-height: 20px;}
+
+
+.ssbox .TextBox{ width:99%;height:18px;line-height:18px;border:0 none;text-align:left;color:#000;position:absolute;left:0;top:0;z-index:0;float:left;margin:0;padding:0;}
+.ztree{width:auto;}
+.TreeBox span,.ztree span{border:0 !important;}
+.TreeTd{background:url('/plat/medias/images/plat/tree_bg.png') left bottom repeat-x;}
+.ssbox tr td{height:20px;}
+.button{width:70px;height: 22px;line-height: 22px;text-align: center;background: url('/plat/medias/images/plat/button.gif') no-repeat 0 0;color: #15428b;font-weight: bold;border: 0 none}
+
+
+
+.buttonbar{background:url('/plat/medias/images/plat/buttonbar_bg.png') repeat-x 0 0;width: 100%;height: 28px;line-height: 28px;border: 0 none}
+.om-buttonbar .om-state-hover{background:#c2dbe2 !important;}
+
+
+#north-panel { height: 100px; }
+
+
+.om-grid tr.rowExpand-rowDetails div.rowExpand-rowDetails-content{border:none;padding:0;height:100px;background-color:#d8d8d8}
+.om-grid div.bDiv table.expandInnerTable{display:table;table-layout:fixed;margin-top:20px;margin-left:20px;}
+.om-grid div.bDiv table.expandInnerTable tr th{border:none;height:32px;line-height: 32px;color:#464646;text-indent:4px;font-weight:normal;text-align:right;}
+.om-grid div.bDiv table.expandInnerTable tr td{border:none;height:32px;line-height: 32px;padding:0;vertical-align:middle;}
+.om-grid div.bDiv table.expandInnerTable tr td p{border:1px #eaeaea solid;background-color:#6b6b6b;color:#d8d8d8;width:96%;height:24px;line-height: 24px;margin:0;text-indent:4px;vertical-align:middle;}
+.om-grid div.bDiv table.expandInnerTable tr th input.candoBtn{border:none;cursor:pointer;width:47px;height:24px;line-height:24px;background: url(/plat/medias/images/plat/canDo.png) no-repeat}
+
+/*底部伸缩panel*/
+.bottomTips{position: absolute;bottom:0;z-index: 200;width:100%;height:26px;line-height:26px;
+	font-size:12px;background-color:#add1f6;color:#444444;text-align: center;}
+.bottomTipsHover{background-color:#9bc7f5;color:#444444;cursor: pointer}
+.bottomPanel{position:absolute;bottom:26px;
+	z-index:100;width:100%;height:195px;overflow:auto;margin-bottom: -195px;
+	background:#eaeaea url('/plat/medias/images/plat/bottomPanelBg.png') repeat-x;}
+.bottomPanelTable{border:1px #adadad solid;height:290px;width:100%;font-size: 12px;border-collapse: collapse;
+	table-layout: fixed;
+}
+.bottomPanelTable th{height:22px;background-color: #e1e1e1;border-bottom: 1px #adadad solid;}
+.tableContent{height:250px; }
+.tableContentInnerDiv{height:250px;overflow:auto;}
+.tableContentInnerTable{margin:0;width:100%; table-layout: fixed;}
+.tableContentInnerTable tr td{height:20px;line-height: 20px;text-align: center;border-bottom:1px #adadad dashed;
+	overflow:hidden;text-overflow:ellipsis;white-space: nowrap;
+}
+.om-messageBox-waiting{
+	z-index: 1499;
+}
+
+
+
+
+
+
+
+

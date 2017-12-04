@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <title>新建流程</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            template: "platFlow",
+            module: ["operamasks", "zTree",
+                "/medias/style/plat/workflow/flow.css",
+                "/medias/style/plat/workflow/myStyle.css",
+                "/medias/style/plat/workflow/flowPropertyEdit.css"]
+        });
+    </script>
+</head>
+
+<body>
+<table border="0" cellborder="0" cellspance="0" class="form">
+    <col width="60px"/>
+    <col/>
+    <tr>
+        <th>流程名称</th>
+        <td>
+            <div class="element_box">
+                <input type="text" class="i_text" value="" data-model="ModelFlow" data-property="name"/>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<div id="center-tab">
+    <ul>
+        <li><a href="#tab1">基本信息</a></li>
+        <li><a href="#tab8">表单</a></li>
+        <li><a href="#tab9">变量</a></li>
+        <li><a href="#tab10">前处理</a></li>
+        <li><a href="#tab11">后处理</a></li>
+        <li><a href="#tab12">描述</a></li>
+    </ul>
+
+    <div id="tab1" class="flowTab form_box">
+        <fieldset class="fieldset">
+            <legend>流程版本管理</legend>
+            <table cellpadding="0" cellspacing="0" border="0" class="form">
+                <colgroup>
+                    <col width="100">
+                    <col width="130">
+                    <col width="100">
+                    <col>
+                </colgroup>
+                <tr>
+                    <th>
+                        流程版本号：
+                    </th>
+                    <td>
+                        <div class="element_box">
+                            <input class="i_text" data-model="ModelFlow" data-property="version"/>
+
+                        </div>
+                    </td>
+                    <th>
+                        原始流程名称：
+                    </th>
+                    <td>
+                        <div class="element_box">
+                            <input class="i_layer" data-model="ModelFlow" data-property="versionName"/>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset class="fieldset">
+            <legend>流程属性</legend>
+            <table cellpadding="0" cellspacing="0" border="0" class="form">
+                <col width="100">
+                <col width="130">
+                <col width="100">
+                <col>
+                <tr>
+                    <th>流程类别：</th>
+                    <td>
+                        <div class="element_box">
+                            <input type="hidden" data-model="ModelFlow" data-property="type"/>
+                            <input class="i_layer" data-model="ModelFlow" data-property="typeName"/>
+                        </div>
+                    </td>
+                    <th>编码：</th>
+                    <td>
+                        <div class="element_box">
+                            <input class="i_text" data-model="ModelFlow" data-property="code"/>
+                        </div>
+                    </td>
+                </tr>
+                <!--<tr>-->
+                <!--<th>优先级别：</th>-->
+                <!--<td colspan="3">-->
+                <!--<div class="element_box">-->
+                <!--<label><input type="radio" name="priority" data-model="ModelFlow" data-property="priority"-->
+                <!--value="high"/> 高-->
+                <!--</label>&nbsp;&nbsp;-->
+                <!--<label><input type="radio" name="priority" data-model="ModelFlow" data-property="priority"-->
+                <!--value="medium"/> 中</label>&nbsp;&nbsp;-->
+                <!--<label><input type="radio" name="priority" data-model="ModelFlow" data-property="priority"-->
+                <!--value="low"/> 低</label>-->
+                <!--</div>-->
+                <!--</td>-->
+                <!--</tr>-->
+            </table>
+        </fieldset>
+        <fieldset class="fieldset">
+            <legend>流程实例标题</legend>
+            <table cellpadding="0" cellspacing="0" border="0" class="infoTable_gzl" style="width:auto">
+                <col width="100">
+                <col width="130">
+                <tr>
+                    <th>流程实例标题：</th>
+                    <td><input type="text" class="i_text" data-model="ModelFlow" data-property="instanceTitle"/></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset class="fieldset">
+            <legend>业务状态字典</legend>
+            <table cellpadding="0" cellspacing="0" border="0" class="infoTable_gzl" style="width:auto">
+                <col width="100">
+                <col width="130">
+                <tr>
+                    <th>业务状态字典：</th>
+                    <td>
+                        <div class="element_box">
+                            <input type="text" class="i_layer" data-model="ModelFlow"
+                                   data-property="workflowYwztZdName"/>
+                            <input type="hidden" data-model="ModelFlow" data-property="workflowYwztZd"/></div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+    <div id="tab8" class="flowTab form_box">
+        <fieldset class="fieldset">
+            <legend>流程表单</legend>
+            <table cellpadding="0" cellspacing="0" border="0" id="sheetTableView" class="list">
+            </table>
+        </fieldset>
+    </div>
+
+    <div id="tab9" class="flowTab form_box">
+        <fieldset class="fieldset">
+            <legend>流程变量</legend>
+            <table cellpadding="0" cellspacing="0" border="0" id="variableTableView" class="list">
+            </table>
+        </fieldset>
+    </div>
+
+    <div id="tab10" class="flowTab form_box">
+        <fieldset class="fieldset">
+            <legend>前处理程序操作</legend>
+            <textarea class="i_textarea" data-model="ModelFlow" data-property="startupProcessSql" cols="20"
+                      rows="2"></textarea>
+        </fieldset>
+        <!--<fieldset class="fieldset">-->
+        <!--<legend>前处理程序反操作</legend>-->
+        <!--<textarea class="Textarea" id="backStartupProcessSql" cols="20" rows="2"></textarea>-->
+        <!--</fieldset>-->
+    </div>
+
+    <div id="tab11" class="flowTab form_box">
+        <fieldset class="fieldset">
+            <legend>后处理程序操作</legend>
+            <textarea class="Textarea" data-model="ModelFlow" data-property="finishProcessSql" cols="20"
+                      rows="2"></textarea>
+        </fieldset>
+    </div>
+
+    <div id="tab12" class="flowTab form_box">
+        <textarea class="Textareb" data-model="ModelFlow" data-property="description"></textarea>
+    </div>
+</div>
+<div class="buttons">
+    <div>
+        <input type="submit" value="确定" class="ombtn" id="save"/>
+        <input type="button" value="取消" class="ombtn" id="cancel"/>
+    </div>
+</div>
+<script type="text/javascript">
+    RX.load({
+        template: "form",
+        module: ["zTree", "operamasks", "flowProp",
+            "/medias/src/plat/conf/workflow/designTools/flowPropertyEdit_Conf.js",
+            "/medias/src/plat/code/workflow/designTools/flowPropertyEdit.js"
+        ]
+    });
+</script>
+</body>
+</html>

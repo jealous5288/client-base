@@ -1,0 +1,99 @@
+﻿/*login*/
+.index_box{width:1024px;height:100%;margin:0 auto;position:relative}
+.Login_subject{ width:310px; height:320px; padding:0px 20px; padding-top:25px; position:absolute;top:80px;right:0px;  background:url('/plat/medias/images/plat/box_bg.png') no-repeat; }
+.denglu{ }
+.denglu tr td{ font-size:14px; text-align:left;padding-top:10px; }
+.denglu tr td a{color:#0066CC; font-size:14px; }
+.denglu tr td a:hover{text-decoration:underline}
+.yh{border:0 none;border:1px solid #cecece;width:270px;height:40px;line-height:40px;background:#fff url('/plat/medias/images/plat/loginName.gif') no-repeat 10px center;font-size:14px;text-indent:32px;color:#222;
+-moz-border-radius: 3px;      /* Gecko browsers */
+-webkit-border-radius: 3px;   /* Webkit browsers */
+border-radius:3px;            /* W3C syntax */
+}
+.mm{border:0 none;border:1px solid #cecece;width:270px;height:40px;line-height:40px;background:#fff url('/plat/medias/images/plat/loginPwd.gif') no-repeat 11px center;font-size:14px;text-indent:32px;color:#222;
+-moz-border-radius: 3px;      /* Gecko browsers */
+-webkit-border-radius: 3px;   /* Webkit browsers */
+border-radius:3px;            /* W3C syntax */
+}
+.denglu tr td a.buttom{background:#3173ce;width:100%;height:40px;float:left;color:#fff;text-align:center;line-height:40px;margin-top:5px;border-radius:2px;font-size:18px; font-family:Arial, Helvetica, sans-serif;}
+.denglu tr td a.buttom:hover{text-decoration:none;background:#008eff;}
+.checkbox{background:none;vertical-align:middle}
+
+.denglu input[placeholder], [placeholder], *[placeholder] {
+   color:#333333 !important;font-family:Arial, Helvetica, sans-serif;    
+}
+
+.top{ width:100%;height:40px;line-height:40px; background:#1684bc; position:relative; }
+.top .topbox{ margin:0 auto; width:980px; }
+.topbox p{ float:right; }
+.topbox p span{ float:left; color:#9ed3e8;  margin:0 7px; display:inline }
+.topbox p a{ float:left; display:block;color:#fff;font-size:12px;font-family:Arial, Helvetica, sans-serif }
+.topbox p a:hover{color:aqua}
+
+.footer{width:100%;height:100px;line-height:40px;background:#fff;position:absolute;left:0;bottom:0;color:#999;text-align:center;font-size:12px; font-family:Arial, Helvetica, sans-serif; }
+
+
+
+/*首页统计TAB*/
+.tjbox { float:left;width:100%;}
+.tab1, .tab2 {
+	width:308px;
+	height:40px;
+	background:#e3f1fb;
+
+}
+.tab1 li, .tab2 li {
+	float:left;
+	width:152px;
+	color:#666666;
+	font-size:16px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	border-left:1px #e3f1fb solid;
+	border-right:1px #e3f1fb solid;
+	border-bottom:1px solid #e2e2e2; 
+	cursor:pointer;	
+}
+.tab1 li.now, .tab2 li.now {
+    height:40px;
+	line-height:40px;
+	color:#666666;
+	font-size:16px;
+	background:#edf4fd;	
+	border-left:1px #e2e2e2 solid;
+	border-right:1px #e2e2e2 solid;
+	border-bottom:1px solid #edf4fd;
+}
+.tablist {			
+	padding:20px;
+	display:none;
+}
+.block {
+	display:block;
+}
+.red {
+	color:#BD0A01;
+}
+fieldset {
+	width:100%;
+}
+legend {
+	background:#B0C0D1;
+	padding:4px 10px;
+	color:#fff;
+}
+#c {
+	margin-top:10px;
+}
+.c1, .c2 {
+	width:100%;
+	line-height:20px;
+}
+.c1 {
+	color:#014CC9;
+}
+.c2 {
+	color:#7E6095;
+	display:none;
+}

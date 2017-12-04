@@ -1,0 +1,149 @@
+﻿/*datagrid鍒楄〃*/
+/*.tbWrap{}
+.listDataGrid{width:100%;_width:auto;background:#fff}
+.listDataGrid caption{background-color:#aedae6;height:26px;line-height: 26px;
+    text-align: left;text-indent: 4px;font-weight: bold;
+    border:1px #a7b3b7 solid;border-bottom:none;
+}
+.listDataGrid thead tr th{background-color:#c8e5ff;height:20px;line-height:21px;border:1px #99cff5 solid;table-layout: fixed;color:#295174;font-weight:normal}
+.listDataGrid tbody tr td{height:24px;line-height:18px;border:1px #cde7f8 solid;padding:0px;text-indent:2px;zoom:1}
+.listDataGrid tbody tr td{width:20px;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;-o-text-overflow: ellipsis}
+.listDataGrid tbody tr td a{color:blue;float:none;}
+.listDataGrid tbody tr td.stretchTd{text-align:center;font-weight:bold;vertical-align: top}
+.listDataGrid tbody tr.hover{cursor: pointer;background-color:#FFF8D9!important}
+.listDataGrid tbody tr.otherTd{text-align: center;height:50px;background-color:#ebeef0}
+.listDataGrid tbody tr.hideOtherTd,.listDataGrid tbody tr.hideOtherTd td{visibility: hidden;height:0;display: none;border:none;}
+.listDataGrid tbody tr.colorTr{background-color:#f4f9ff}
+.listDataGrid tbody tr.selectRow{background-color:#ffefae;font-weight:normal;cursor:pointer}*/
+
+.listDataGrid{width:100%;background:#fff}
+.listDataGrid .trhover:hover{background:#FFF8D9}
+.listDataGrid tr th{height:34px;line-height:24px;text-align:center;color:#333;background:#f6faff;font-weight:bold;border:1px solid #e2e2e2;font-size: 12px;}
+.listDataGrid tr th button{background-image:url('/medias/images/plat/x.gif');padding:0 3px; align:right;width:15px;height:15px; color:#ccc; border-width:0; background-color:transparent; background-color:rgba(255,255,255,.2); opacity:0;start透明效果在ie下不生效的解决方案filter:alpha(opacity=0)end;cursor:pointer}
+.listDataGrid tr td{height:34px;line-height:34px;color:#333;border:1px solid #e2e2e2;}
+.listDataGrid tbody tr td{width:20px;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;-o-text-overflow: ellipsis}
+.listDataGrid tbody tr td.stretchTd{text-align:center;font-weight:bold;vertical-align: top}
+.listDataGrid tbody tr.hover{cursor: pointer;background-color:#FFF8D9}
+.listDataGrid tbody tr.otherTd{text-align: center;height:50px;background-color:#ebeef0}
+.listDataGrid tbody tr.colorTr{background-color:#f4f9ff}
+.listDataGrid tbody tr.selectRow{background-color:#ffefae;font-weight:normal;cursor:pointer}
+.listDataGrid tbody tr.disabledRow{font-style:oblique;cursor:not-allowed;background-color:#BFBCBC}
+.listDataGrid tr td img{width:16px;height:16px;margin:0 5px;cursor:pointer}
+.listDataGrid tr td a{color:#0049c3;margin: 0 5px;}
+.listDataGrid tr td a:hover{text-decoration:underline}
+.listDataGrid tr td .ellipsis a{float:none}
+.se{background:#f9f9f9}
+
+/*---------------------*/
+.listDataGrid th.grid-opt-chkAll,.listDataGrid td.grid-opt-stretch,.listDataGrid td.grid-opt-chk{width:25px;text-align: center;font-weight: bold;}
+.listDataGrid th.grid-opt-chkAll input,.listDataGrid td.grid-opt-stretch input,.listDataGrid td.grid-opt-chk input{
+    vertical-align:middle;
+    margin-right:0px!important;
+    margin-left: 0px!important;
+}
+
+.listInnerForm{border:none;margin:0;width:100%;}
+.listInnerForm tbody tr th{text-align: right;font-weight: normal;border:none;}
+.listInnerForm tbody tr td{height:22px;line-height: 22px;text-align:left;border:none;}
+.listInnerForm tbody tr td input{height:20px;line-height:20px;text-indent:0px;border:none;}
+.listInnerForm label{color:blue;}
+.listInnerItem li{display: inline-block;margin-right:20px;color:#2c9579;}
+.listInnerItem li label{color:#2d77c2;padding-left: 2px;}
+
+/*---------------------*/
+/*鍒嗛〉*/
+.rx-paging{float:right;width:auto;margin-top:5px;margin-right:5px}
+.rx-pagenate{display:block;width:425px;height:26px;line-height:26px;
+    overflow: hidden;margin:0;padding:0;}
+.rx-pagenate li{display:inline-block;zoom:1;*display: inline;text-align:center;padding:0;width:20px;height:24px;line-height: 24px;margin-right:5px;background-color: #fff;}
+.rx-pagenate li.rx-frist,.rx-pagenate li.rx-last{border:1px #a7b3b7 solid;vertical-align: top;}
+.rx-pagenate li.rx-last{margin-right:0;}
+.rx-pagenate li.rx-prev{width:42px;border:1px #a7b3b7 solid;display: inline-block;zoom:1;*display: inline;overflow:hidden;}
+.rx-pagenate li.rx-next{width:42px;border:1px #a7b3b7 solid;display: inline-block;zoom:1;*display: inline;overflow:hidden;}
+.rx-pagenate li.rx-pagecurrent{width:26px;border:1px #a7b3b7 solid;display: inline-block;zoom:1;*display: inline;overflow:hidden;}
+.rx-paging span.page-input{padding:1px;}
+.rx-paging span.page-input > input{padding:0;width:26px;!important;height:22px;line-height: 22px; font-size:12px; text-align:center;color:#000000;margin-right:5px;}
+.rx-paging span.page-input > button{padding:0;width:26px;!important;height:25px; font-size:12px; text-align:center;color:#000000}
+.rx-pagenate li.rx-pageRoll{width:auto;}
+.rx-pRoll{width:368px;overflow:hidden;text-align: left;}
+.rx-pRollUl{display:block;width:100000px;text-align: left;}
+.rx-pRollUl li{width:24px;border:1px #a7b3b7 solid;display: inline-block;zoom:1;*display: inline;overflow:hidden;}
+.rx-pagenate li.hover{background-color: #3b7dd6;cursor: pointer;color:#fff;border:1px solid #336699}
+.rx-pagenate li.clicked{background-color: #3b7dd6;color:#fff;font-weight:bold;border:1px solid #336699}
+.rx-pagenate li.disabled{color: #999999;cursor: not-allowed;background-color: #ffffff;border-color: #dddddd;}
+.rx-pagenate li.runDisabled{color: #999999;cursor: not-allowed;background-color: #ffffff;border-color: #dddddd;}
+.runDisabled{color: #999999;cursor: not-allowed;background-color: #ffffff;border-color: #dddddd;}
+
+/***********************************/
+
+/*鍒嗛〉2*/
+.rx-new-paging{
+    margin-top:6px;
+}
+.rx-new-pagenate{
+    display: block;
+    width:auto;
+    float:right;
+}
+.rx-new-pagenate li{
+    display: block;
+    float:left;
+    padding:2px 5px;
+    text-align: center;
+    border:1px #4682b4 solid;
+    margin-left:5px;
+}
+.rx-new-pagenate li.hover{background-color: #3b7dd6;cursor: pointer;color:#fff}
+.rx-new-pagenate li.clicked{background-color: #3b7dd6;color:#fff;font-weight:bold}
+
+
+/*************************************/
+
+
+/*loading*/
+.gridLoading-model{
+    width:100%;height:100%;background:transparent url("dotXY.png") repeat;
+    position:absolute;left:0px;top:0px;
+}
+
+.gridLoading-win{margin:100px auto;position:absolute;
+    border:2px #303030 solid; background-color: #fff ;
+   left:50%; top:100px;
+    width:210px;height:43px;
+	 margin-left:-105px;
+}
+
+.gridLoading-body{background-color: #fff;
+    margin:2px auto;
+}
+
+.gridLoading-body tr td{height:38px;line-height:38px;text-align: center}
+
+.gridLoading-icon{
+    width:32px;height:32px;
+    display: block;
+    background: url(waiting.gif) center center no-repeat transparent;
+}
+
+.gridLoading-font{color:#498aec;}
+
+.zbcDiv{
+    position: fixed;
+    background:rgba(11, 11, 11, 0.2);
+    width:3000px;
+    height:3000px;
+    z-index:1000;
+    top:0px;
+    left:0px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3363370b,endColorstr=#3363370b);
+    display:none;
+}
+
+.grid-load{display:none;float:left;margin-left:200px}
+
+.rx-grid-tr td{
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow:    ellipsis;
+}

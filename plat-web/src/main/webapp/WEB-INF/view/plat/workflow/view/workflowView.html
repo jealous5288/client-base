@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <title>流程图形</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /*底部伸缩panel*/
+        .bottomTips {
+            position: absolute;
+            bottom: 0;
+            z-index: 200;
+            width: 100%;
+            height: 26px;
+            line-height: 26px;
+            font-size: 12px;
+            background-color: #add1f6;
+            color: #444444;
+            text-align: center;
+        }
+
+        .bottomTipsHover {
+            background-color: #9bc7f5;
+            color: #444444;
+            cursor: pointer
+        }
+
+        .bottomPanel {
+            position: absolute;
+            bottom: 26px;
+            z-index: 100;
+            width: 100%;
+            height: 250px;
+            overflow: auto;
+            background: #eaeaea url('/plat/medias/style/images/baseModel/bottomPanelBg.png') repeat-x;
+        }
+    </style>
+</head>
+<body>
+<div style="height: 94.5%;width:99.2%;border: solid 0px #2966b1;margin:2px; ">
+    <div style="height:70%;top:0px;border: solid 1px #2966b1;margin:1px;" id="wfView">
+        <iframe id='view' border=0 frameBorder='0' class="ifrContent" height='100%'
+                width='100%' name='imageViewWin'></iframe>
+    </div>
+    <div style="height:30%;border: solid 1px #2966b1;margin:1px;padding-bottom: 2px;" id="tashList">
+    <iframe id='blist' name='taskListViewWin' border=0 frameBorder='0' src='/plat/workflow/view/taskList' class="ifrContent" height='100%'
+    width='100%'></iframe>
+    </div>
+    <div class="bottomTips" id="bottomTips">
+        <b>点击关闭任务列表</b>
+    </div>
+    <!--<div style="height:42.7%;border: solid 1px #2966b1;margin:1px;padding-bottom: 2px;display: none" class="bottomPanel">-->
+    <!--<iframe id='blist' border=0 frameBorder='0' src='/workflow/view/taskList' class="ifrContent" height='100%'-->
+    <!--width='100%'></iframe>-->
+    <!--</div>-->
+    <!--<div class="bottomPanel" id="bottomPanel">-->
+        <!--<iframe id='blist' border=0 frameBorder='0' src='/workflow/view/taskList' class="ifrContent" height='100%'-->
+                <!--width='100%'></iframe>-->
+    <!--</div>-->
+</div>
+<script type="text/javascript">
+    RX.load({
+        module: ["jquery", "formUtils","/medias/src/plat/code/workflow/view/workflowView.js"]
+    });
+</script>
+</body>
+</html>

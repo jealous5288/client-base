@@ -1,0 +1,56 @@
+.menu{
+	width: 300px;
+	height: 30px;
+	border: 1px #a3a3a3 solid;
+	background-color: #d5d5d5
+}
+.link{
+	line-height:30px;
+	float: left;
+	width:74px;
+	height: 30px;
+    border-right: 1px #a3a3a3 solid;
+	cursor: pointer;
+}
+.button1{
+	background: #6ea1d5;
+	width:45px;
+	height:24px;
+	border:0 none;
+	color:#fff;
+	font-weight:normal;
+	line-height:25px;
+	text-align:center;
+	cursor:pointer;
+	border-radius: 2px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+	-moz-border-radius: 2px; /* Mozilla浏览器的私有属性 */
+	-webkit-border-radius: 2px; /* Webkit浏览器的私有属性 */
+}
+.resultTitle{
+	line-height:30px;
+	text-align: center;
+	width:298px;
+	height: 30px;
+	background-color: #d5d5d5;
+	border: 1px #d5d5d5 solid
+}
+.resultText{
+	overflow:auto;
+	width: 298px;
+	height: 144px;
+	border: 1px #d5d5d5 solid;
+
+}
+a:hover{
+	background-color: #f1f1f1;
+}
+/*.clicked{*/
+	/*line-height:30px;*/
+	/*float: left;*/
+	/*width:74px;*/
+	/*height: 30px;*/
+	/*border-right: 1px #a3a3a3 solid;*/
+	/*cursor: pointer;*/
+	/*background-color: #f1f1f1;*/
+	/*font-weight: bolder;*/
+/*}*/

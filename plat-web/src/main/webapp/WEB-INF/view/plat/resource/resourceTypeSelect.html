@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>配置列表页面</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+    </style>
+    <script>
+        function addResource(type,name){
+            openStack(window, "新增"+name, "medium", "/resource/resourceEdit?type=xz&resourceType="+type);
+        }
+    </script>
+</head>
+<body>
+<div class="base_box">
+    <% for(subdict in resourceDict){  %>
+        <input type='button' onclick='addResource("${subdict.code}","${subdict.value}")' value='${subdict.value}'/>
+    <% }%>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({template: "platMain"});
+    </script>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="" class="form_box">
+    <table class="form" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <th><b>*</b>委托人</th>
+            <td>
+                <input type="text" class="TextBox" value="" data-model="ModelEntrust" data-property="entrustUserName"/>
+                <input type="hide" data-model="ModelEntrust" data-property="entrustUserId"/>
+            </td>
+        </tr>
+        <tr>
+            <th><b>*</b>开始时间</th>
+            <td><input type="text" class="TextBox" value="" data-model="ModelEntrust" data-property="startDate" id="startDate"/></td>
+        </tr>
+        <tr>
+            <th><b>*</b>结束时间</th>
+            <td><input type="text" class="TextBox" value="" data-model="ModelEntrust" data-property="endDate" id="endDate" /></td>
+        </tr>
+    </table>
+</div>
+<div class="w_button_box">
+    <input type="button" id="save" value="保存" class="c_button"/>
+</div>
+<script type="text/javascript">
+    RX.load({
+        template: "form",
+        module: ['/medias/src/plat/conf/workflow/instance/entrustEdit_config.js',
+            '/medias/src/plat/code/workflow/instance/entrustEdit.js']
+    });
+</script>
+</body>
+</html>

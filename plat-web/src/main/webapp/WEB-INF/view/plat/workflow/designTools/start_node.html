@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <title>开始环节</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({module:["/medias/style/plat/workflow/flow.css","operamasks",
+            "/medias/style/plat/workflow/myStyle.css","zTree"]});
+    </script>
+    <style>
+    html, body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .om-widget-content {
+        border: none;
+    }
+
+    .om-tabs .om-tabs-panels .om-panel-body {
+        padding-top: 5px;
+    }
+
+    .om-dialog .om-dialog-buttonpane {
+        padding-top: 0;
+    }
+
+    div.flowTab {
+        height: 443px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    textarea.Textareb {
+        height: 220px
+    }
+
+    .fieldset {
+        padding: 5px 0;
+    }
+
+    .popWinTree {
+        height: 330px
+    }
+
+    </style>
+
+</head>
+
+<body>
+<div id="center-tab">
+    <ul>
+        <li><a href="#tab2">说明</a></li>
+    </ul>
+    <div id="tab2">
+        <textarea class="Textareb" name="description" id="description"></textarea>
+    </div>
+</div>
+
+<div class="buttons">
+    <div>
+        <input type="submit" value="确定" class="ombtn" id="save"/>
+        <input type="button" value="取消" class="ombtn" id="cancel"/>
+    </div>
+</div>
+<script type="text/javascript">
+    RX.load({
+        module: ["jquery","jqueryJson","zTree","operamasks",
+            "flowProp"],
+        callback:function(){
+            $(document).ready(function () {
+                $("#center-tab").omTabs({
+                    lazyLoad:true
+                });
+                var eles = {};
+                var node = _top.property;
+                var pro = null;
+                if (node) {
+                    eles.description = $("#description");
+
+                    pro = node.property;
+                    $.each(eles, function (key, e) {
+                        if (e instanceof  $) {
+                            if (e.attr("type") == "radio" || e.attr("type") == "checkbox") {
+                                e.filter(function () {
+                                    return this.value == pro[key];
+                                }).attr("checked", true);
+                            } else {
+                                e.val(pro[key] || "");
+                            }
+                        } else {
+                            if (pro[key] != undefined && pro[key] != null&&pro[key] != "") {
+                                e.id.val(pro[key] || "");
+                            }
+                        }
+                    });
+//            $.each(pro.variables, function (i, v) {
+//                addVar(v.name, v.value, i);
+//            });
+                }
+                $("#save").omButton({icons:{left:RX.handlePath('/medias/images/baseModel/button/accept.gif')}}).click(function () {
+                    if (pro) {
+                        for (var key in eles) {
+                            var e = eles[key];
+                            var v = "";
+                            var require = "";
+                            if (e instanceof  $) {
+                                require = e.attr("require");
+                                if (e.attr("type") == "radio" || e.attr("type") == "checkbox") {
+                                    v = e.filter(function () {
+                                        return this.checked;
+                                    }).val();
+                                } else {
+                                    v = e.val();
+                                }
+                            } else {
+                                require = e.name.attr("require");
+                                v = e.id.val();
+                            }
+                            if (require != undefined && (v == "" || v == undefined)) {
+                                alert(require);
+                                e instanceof  $ ? e.focus() : e.name.focus();
+                                return false;
+                            }
+                            pro[key] = v;
+                        }
+                    }
+                    $("#cancel").trigger("click");
+                });
+                $("#cancel").omButton({icons:{left:RX.handlePath('/medias/images/baseModel/button/cancel.png')}}).click(function () {
+                    _top.property = null;
+                    _top.closeLayer(window);
+                });
+            });
+        }
+    });
+</script>
+</body>
+</html>

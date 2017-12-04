@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <title>属性编辑</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            module: ["/medias/style/plat/workflow/flow.css", "operamasks",
+                "/medias/style/plat/workflow/myStyle.css", "zTree"]
+        });
+    </script>
+    <style>
+    html, body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .om-widget-content {
+        border: none;
+    }
+
+    .om-tabs .om-tabs-panels .om-panel-body {
+        padding-top: 5px;
+    }
+
+    .om-dialog .om-dialog-buttonpane {
+        padding-top: 0;
+    }
+
+    div.flowTab {
+        height: 343px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: 1px red solid;
+    }
+
+    textarea.Textareb {
+        height: 280px
+    }
+
+    .fieldset {
+        width: 98%;
+        border: 1px solid #d5dfe5;
+        display: block;
+        margin: 0px auto;
+        padding: 5px 0;
+        margin-bottom: 5px;
+    }
+
+    .fieldset legend {
+        color: #15428b;
+        font-weight: bold;
+    }
+
+    .popWinTree {
+        height: 290px
+    }
+
+    #sheets TD {
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+<table border="0" cellborder="0" cellspance="0" class="titleBar">
+    <col width="60px"/>
+    <col/>
+    <tr>
+        <th>活动名称</th>
+        <td><input type="text" value="" id="titleText"/></td>
+    </tr>
+</table>
+
+<div id="center-tab" style="border:none">
+    <ul>
+        <li><a href="#tab1">选择流程</a></li>
+        <li><a href="#tab4">流程表单</a></li>
+        <li><a href="#tab3">流程变量</a></li>
+        <li><a href="#tab2">环节序号</a></li>
+    </ul>
+
+    <div id="tab1">
+        <div class="popWinTree">
+            <ul class="ztree" id="workflowTypeTree"></ul>
+        </div>
+        <table cellpadding="0" cellspacing="0" border="0" class="infoTable_gzl" style="width:auto">
+            <col width="200px"/>
+            <tr>
+                <th style="text-align: left">选择子流程：</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="TextBoxa" readonly="" id="workflowName" require="子流程不能为空"/>
+                    <input type="hidden" id="workflowId"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="tab4">
+        <fieldset class="fieldset">
+            <legend>流程表单</legend>
+            <table class="list">
+                <colgroup>
+                    <col width="150"/><col width="150"/><col width="90"/><col/>
+                </colgroup>
+                <thead>
+                <th>
+                    标题
+                </th>
+                <th>
+                    所属表单
+                </th>
+                <th>
+                    表单控制
+                </th>
+                <th>
+                    操作
+                </th>
+                </thead>
+                <tbody id="sheets">
+
+                </tbody>
+            </table>
+            <select class="select" id="sheetMode" style="display: none">
+                <option value="0">编辑</option>
+                <option value="1">审批</option>
+                <option value="2">签章</option>
+            </select>
+        </fieldset>
+    </div>
+
+    <div id="tab2">
+        <input class="TextBoxa" name="nodeSort" id="nodeSort" />
+    </div>
+
+    <div id="tab3" class="flowTab">
+        <fieldset class="fieldset">
+            <legend>修改流程变量</legend>
+            <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;margin: 10px 0;">
+                <tr>
+                    <th>选择流程变量：</th>
+                    <td><input type="text" class="TextBoxa" id="varName"/></td>
+                    <td><input class="button" type="button" id="saveVar" value="添加"/></td>
+                </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" border="0" class="list">
+                <col width="40%"/><col width="40%"/><col/>
+                <tr>
+                    <th>变量名</th>
+                    <th>值</th>
+                    <th>操作</th>
+                </tr>
+                <tbody id="vars">
+
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+</div>
+
+<div class="buttons">
+    <div>
+        <input type="submit" value="保存" class="ombtn" id="save"/>
+        <input type="button" value="取消" class="ombtn" id="cancel"/>
+    </div>
+</div>
+<script type="text/javascript">
+    RX.load({
+        template: "form",
+        module: ["/medias/lib/plat/flow/flow.property.js", "/medias/lib/plat/flow/node/nested_node.js",
+            "/medias/lib/plat/jquery.ztree.all-3.4.min.js", "/medias/lib/plat/operamasks-ui.js",
+            "/medias/src/plat/code/workflow/designTools/nestedNode.js"]
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({module: ["/medias/plugin/htui/css/public.css", "zTree"]});
+    </script>
+</head>
+
+<body>
+<div id="dcMain" style="margin-left:0;padding-top:0;"> <!-- 当前位置 -->
+    <div id="index" class="mainBox" style="padding-top:38px;height:auto!important;height:550px;min-height:550px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="indexBoxTwo">
+            <tr>
+                <td width="260px" valign="top" class="pr">
+                    <div class="indexBox">
+                        <div class="boxTitle">流程类别</div>
+                        <div id="treeDiv" class="operateTreeDiv w300">
+                            <ul id="tree" class="ztree" style="width:260px; overflow:auto;margin:10px auto;"></ul>
+                        </div>
+                    </div>
+                </td>
+                <td valign="top" class="pl">
+                    <div class="indexBox">
+                        <div class="boxTitle">类别信息
+                            <span style="float:right;">
+                                <a class="btn" href="javascript:void(0);" style="display:block;" id="save">保存</a>
+                            </span>
+                        </div>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic formCategory">
+                            <tr>
+                                <td width="120">类别名称：</td>
+                                <td>
+                                    <span><input type="text" name="categoryName" alias="name"
+                                                 style="width:150px;"/></span>
+                                    <input type="hidden" value="" id="selfId"/>
+                                </td>
+                                <td width="200" rowspan="3">
+                                    <div class="popTreeDiv">
+                                        <ul id="parentTree" class="ztree" style="overflow:auto;"></ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>上级类别：</td>
+                                <td>
+                                    <span class="orgPic" _treeName="上级部门">
+                                        <input type="text" name="parentCategory" _treeName="上级部门"
+                                               style="width:150px;" readonly="readonly"/>
+                                        <input type="hidden" value="" id="parentId"/>
+                                        <input type="hidden" value="" id="oldPid"/>
+                                    </span> <img class="orgPic" src="/plat/medias/images/baseModel/application_go.png"
+                                                 align="absmiddle"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>类别描述：</td>
+                                <td>
+                                    <textarea name="" alias="description" class="textarea"
+                                              style="height: 140px;width:100%;"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    RX.load({
+        module: ["jquery", "formUtils","zTree",
+            "/medias/src/plat/code/workflow/designTools/workflowType.js"
+        ]
+    });
+</script>
+</body>
+</html>

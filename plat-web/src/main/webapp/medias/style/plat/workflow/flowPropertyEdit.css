@@ -1,0 +1,144 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.om-widget-content {
+    border: none;
+}
+
+.om-tabs .om-tabs-panels .om-panel-body {
+    padding-top: 5px;
+}
+
+.om-dialog .om-dialog-buttonpane {
+    padding-top: 0;
+}
+
+div.flowTab {
+    height: 405px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+textarea.Textareb {
+    width: 97%;
+    resize: none;
+    margin: 10px auto;;
+    border: 1px solid #9ebee3;
+    display: block;
+    height: 250px
+}
+
+.fieldset {
+    width: 98%;
+    border: 1px solid #d5dfe5;
+    display: block;
+    margin: 0px auto;
+    padding: 0;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.fieldset legend {
+    color: #15428b;
+    font-weight: bold;
+}
+
+.popWinTree {
+    height: 330px
+}
+
+legend {
+    margin-left: 10px;
+    padding: 0 5px;
+}
+
+.fieldset {
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+
+#tab4 .popWinTree, #tab5 .popWinTree, #tab6 .popWinTree {
+    margin: 10px 0 10px -1px;
+    width: 150px;
+}
+
+.selecta {
+    margin-left: 10px;
+}
+
+.Textarea {
+    margin: 5px;
+}
+
+/*#autoIssueDate {*/
+/*width: 180px;*/
+/*}*/
+
+.mytable {
+    border:none !important;
+    margin: 5px auto;
+    padding-top: 5px;
+    width: 100%;
+}
+.mytable td{
+    border:none !important;
+}
+
+.mytable th {
+    border:none !important;
+    background-color:white !important;
+    font-weight: normal;
+}
+
+#selectSheets {
+    width: 100px;
+}
+
+.TextBoxErr{color: #333; border:1px solid #ff0000 !important;background:#fff;}
+
+.invalidtip{padding-left:2px;font-size:12px !important;border:none !important;}
+
+.list caption{font-size: 12px !important;line-height:30px;height:40px;font-weight:normal;background-color:white;}
+
+.list td {text-align: center !important;}
+
+.editTr{background-color:#cccccc}
+
+.TextBoxa{height:18px !important;line-height:18px !important;width:150px;}
+
+.selectIcon{background:#fff url('/plat/medias/images/plat/toolbar_find.png') no-repeat right 2px;}
+
+.yesButton{background-image: url('/plat/medias/images/plat/button/accept.gif'); background-position: 0% 50%; background-repeat: no-repeat;}
+
+.eleSpan{
+    background-color:#fc0;
+    display:-moz-inline-box;
+    display:inline-block;
+    width:150px;
+}
+
+.elementSrc{height:20px;}
+
+.eleListTitle{
+    width:100%;
+    font-weight:bold;
+    text-align:left;
+    border-bottom: 1px solid #D7D7D7;
+    color: #666666;
+    margin-left:15px;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+}
+
+.spanshow{
+    border:none !important;
+}
+
+.clearlayer {display:none;cursor:pointer;}

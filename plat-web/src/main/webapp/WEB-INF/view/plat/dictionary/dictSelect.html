@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({template: "platMain"});
+    </script>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .viewElement {
+            color: black
+        }
+    </style>
+</head>
+<body>
+<div id="" class="form_box">
+    <div data-model="SDict" class="query_box">
+    </div>
+    <div class="list_box">
+        <div data-model="ModelDictList" title="字典选择列表"></div>
+    </div>
+</div>
+<div class="w_button_box">
+    <input type="button" id="confirm" value="确认" class="c_button"/>
+</div>
+<script type="text/javascript">
+    RX.load({
+        template: "grid",
+        module: ["/medias/src/plat/conf/dictionary/dictSelect_config.js",
+            "/medias/src/plat/code/dictionary/dictSelect.js"]
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <TITLE>特送退回</TITLE>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            template: "platMain",
+            module: ["zTree"]
+        });
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .content_wrap {
+        }
+    </style>
+</HEAD>
+
+<BODY>
+<div class="form_box">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%" class="form" style="margin: 0;">
+        <col width="35%"/>
+        <col/>
+        <tr>
+            <th>办理意见：</th>
+            <td>
+                <textarea id="opinion" name="opinion"
+                          class="textarea prompt">不同意</textarea>
+            </td>
+        </tr>
+    </table>
+    <h2 style="width: 100%;height: 22px;line-height: 22px;text-align: left;text-indent: 5px;color: #333;font-size: 12px">
+        退回环节：</h2>
+    <div class="zTreeDemoBackground left">
+        <div style="width: 100%;height: 250px;overflow-y: auto;overflow-x: hidden">
+            <ul id="tree" class="ztree">
+            </ul>
+        </div>
+        <input type="hidden" id="nodeid" value="">
+        <input type="hidden" id="fj_id"/>
+    </div>
+</div>
+<div class="w_button_box">
+    <input type="button" id="viewFile" value="上传/查看附件" class="button"/>
+    <input type="button" value="确定" id="yes" class="c_button"/>
+    <input type="button" value="关闭" id="close" class="button"/>
+</div>
+</BODY>
+<script type="text/javascript">
+    RX.load({
+        template: "form",
+        module: ["zTree",
+            "/medias/src/plat/code/workflow/instance/specialBack.js"
+        ]
+    })
+</script>
+</HTML>

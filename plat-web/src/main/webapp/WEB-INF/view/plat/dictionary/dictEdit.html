@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>字典编辑页面</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({template: "platMain"});
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form_box">
+    <div class="page_title">
+        <h1>字典基本信息</h1>
+    </div>
+    <table class="form" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <th><b>*</b>字典名称</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelDict" data-property="dictName"/>
+                </div>
+            </td>
+            <th><b>*</b>字典编码</th>
+            <td>
+                <div class="element_box">
+                    <input type="text" class="i_text" data-model="ModelDict" data-property="dictCode"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th><b>*</b>是否为空</th>
+            <td>
+                <div class="element_box">
+                    <div data-model="ModelDict" data-property="isEmpty"></div>
+                </div>
+            </td>
+            <th><b>*</b>字典类型</th>
+            <td>
+                <div class="element_box">
+                    <select class="i_select" data-model="ModelDict" data-property="dictType"/>
+                    <option value=""></option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>上级字典</th>
+            <td colspan="3">
+                <div class="element_box">
+                    <input type="text" class="i_layer" data-model="ModelDict" data-property="pdictName"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>描述</th>
+            <td colspan="3">
+                <div class="element_box">
+                <textarea class="i_textarea" data-model="ModelDict" data-property="description"
+                          onblur="textareachk(this,'bzs')" onkeyup="textareachk(this,'bzs')"
+                          title="描述">
+                </textarea>
+                    <div class="txtword" id="bzs"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!--字典详细列表-->
+    <div id="subDictList" style="display: none">
+    </div>
+</div>
+
+<!-- 下面按钮 -->
+<div class="w_button_box">
+    <input type="button" id="save" value="保存" class="c_button"/>
+    <!--<input type="button" value="取消" class="button" />-->
+</div>
+<script type="text/javascript">
+    RX.load({
+        template: "form",
+        module: ["/medias/src/plat/conf/dictionary/dictEdit_config.js",
+            "/medias/src/plat/code/dictionary/dictEdit.js"]
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html xmlns:v>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="layout" content="main"/>
+    <title>流程图形</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({module: "/medias/style/plat/workflow/flow.css"});
+    </script>
+    <style>
+        html, body {
+            font-size: 12px;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow-y: auto;
+        }
+
+        a {
+            font-size: 12px;
+        }
+
+        fieldset {
+            font-size: 12px;
+        }
+
+        form {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body style="margin:0px;">
+<div id="canvas" class="canvas" tabindex="0" style="height: 99%"></div>
+<script type="text/javascript">
+    RX.load({
+        module: [["jquery", "json2"],
+            ["/medias/lib/plat/flow/elements.js", "/medias/lib/plat/flow/flow.js", "/medias/lib/plat/flow/shape.js",
+                "/medias/lib/plat/flow/rect.js", "/medias/lib/plat/flow/oval.js", "/medias/lib/plat/flow/node/judge_node.js",
+                "/medias/lib/plat/flow/node/start_node.js", "/medias/lib/plat/flow/node/end_node.js", "/medias/lib/plat/flow/node/read_node.js",
+                "/medias/lib/plat/flow/node/nested_node.js", "/medias/lib/plat/flow/router.js", "/medias/lib/plat/flow/node/activity_node.js",
+                "/medias/lib/plat/flow/flowViewer.js", "/medias/lib/plat/flow/raphael.js",
+                "jqueryJson", "flowProp"],
+            ["/medias/src/plat/code/workflow/view/image.js"]]
+    });
+</script>
+</body>
+</html>

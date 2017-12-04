@@ -1,0 +1,19 @@
+﻿/*菜单ztree图标样式*/
+.ztree li span.button.menuIcon_ico_open{margin-right:2px; background: url(/plat/medias/images/plat/tree/menu.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.menuIcon_ico_close{margin-right:2px; background: url(/plat/medias/images/plat/tree/menu.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.menuIcon_ico_docu{margin-right:2px; background: url(/plat/medias/images/plat/tree/menu.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+
+/*机构ztree图标样式*/
+.ztree li span.button.organIcon_ico_open{margin-right:2px; background: url(/plat/medias/images/plat/tree/organ.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.organIcon_ico_close{margin-right:2px; background: url(/plat/medias/images/plat/tree/organ.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.organIcon_ico_docu{margin-right:2px; background: url(/plat/medias/images/plat/tree/organ.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+
+/*岗位ztree图标样式*/
+.ztree li span.button.postIcon_ico_open{margin-right:2px; background: url(/plat/medias/images/plat/tree/post.gif) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.postIcon_ico_close{margin-right:2px; background: url(/plat/medias/images/plat/tree/post.gif) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.postIcon_ico_docu{margin-right:2px; background: url(/plat/medias/images/plat/tree/post.gif) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+
+/*用户ztree图标样式*/
+.ztree li span.button.userIcon_ico_open{margin-right:2px; background: url(/plat/medias/images/plat/tree/user.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.userIcon_ico_close{margin-right:2px; background: url(/plat/medias/images/plat/tree/user.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.userIcon_ico_docu{margin-right:2px; background: url(/plat/medias/images/plat/tree/user.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}

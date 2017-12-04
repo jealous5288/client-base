@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>日志列表</title>
+    <script type="text/javascript" src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            template: "platMain"
+        });
+    </script>
+</head>
+
+<!--js引用区-->
+<script type="text/javascript">
+    RX.load({
+        template: "grid",
+        module: [
+            "/medias/src/plat/conf/log/loginLogList_config.js",
+            "/medias/src/plat/code/log/loginLogList.js"]
+    });
+</script>
+
+<body>
+
+<!--搜索区-->
+<div data-model="SLoginLog" class="query_box"></div>
+<!--列表区-->
+<div class="list_box">
+    <div data-model="LoginLogList" title="日志列表"></div>
+</div>
+
+
+</body>
+</html>

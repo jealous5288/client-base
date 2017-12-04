@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            module: ["/medias/css/baseModel/MainForm.css",
+                "zTree"]
+        });
+    </script>
+</head>
+
+<body>
+<div id="treeDiv" class="form_box">
+    <ul id="tree" class="ztree" style="width:260px; overflow:auto;margin:10px auto;"></ul>
+</div>
+<div class="w_button_box">
+    <div>
+        <input type="button" value="确定" class="c_button" id="yes"/>
+        <input type="button" value="取消" class="c_button" id="cancel"/>
+    </div>
+</div>
+<script type="text/javascript">
+    RX.load({
+        module: ["jquery", "formUtils", "zTree",
+            "/medias/src/plat/code/workflow/designTools/workflowTypeSelect.js"
+        ]
+    });
+</script>
+</body>
+</html>

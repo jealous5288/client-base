@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            module: ["/medias/style/plat/workflow/myStyle.css",
+                "/medias/style/plat/workflow/flow.css",
+                "operamasks",
+                "zTree"]
+        });
+    </script>
+    <style>
+        html, body {
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .toolbar button {
+            width: 25px;
+            height: 25px;
+        }
+
+        .buttonbar {
+            height: auto;
+            background-repeat: repeat;
+        }
+
+        .om-buttonbar .om-btn {
+            float: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="" style="margin-top:1px">
+    <button id="button-new" value="新建" style=""></button>
+    <button id="button-save" value="保存"></button>
+</div>
+
+<div id="buttonbar" class="buttonbar" style="margin-top:2px">
+</div>
+
+<div style="position: relative;" id="body">
+    <div id="panel-containers" class="flDiv" style="margin-right: 200px;width:auto;float: none;height: 100%">
+        <iframe src="/plat/workflow/designTools/panel" id="flow-panel" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <div id="flow-list" class="flInfo"
+         style="overflow: auto;float: none;position: absolute;top:0;right:0;height: 100%;">
+        <ul class="ztree" id="flowlist"></ul>
+    </div>
+</div>
+<script type="text/javascript">
+    RX.load({
+        module: ["jquery", "formUtils", "zTree", "operamasks",
+            "/medias/src/plat/code/workflow/designTools/flow.js"
+        ]
+    });
+</script>
+</body>
+</html>

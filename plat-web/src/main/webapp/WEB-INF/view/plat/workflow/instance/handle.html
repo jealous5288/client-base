@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>办理确认</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            template: "platMain",
+            module: ["zTree"]
+        });
+    </script>
+
+    <style>
+        html, body {
+            height: 100%;
+           overflow: hidden; 
+        }
+
+        .infoTable {
+            margin: 0;
+        }
+
+        .infoTable td {
+            font-size: 12px;
+        }
+
+        #mainTableDiv {
+            background: #fff;
+            border-right: 1px solid #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+<form id="myform">
+    <div class="form_box">
+        <div >
+            <div class="popInfoDiv"  id="mainTableDiv">
+                <table border="0" cellspacing="0" cellpadding="0" width="100%" class="form" >
+                    <col width="35%"/>
+                    <col/>
+                    <tr id="step3">
+                        <th>办理意见：</th>
+                        <td>
+                        <textarea id="description" name="description"
+                                  class="i_textarea prompt"></textarea>
+                            <a class="errorImg"></a>
+                            <a class="errorMsg"></a>
+                        </td>
+                    </tr>
+                    <tr id="nodeInfoArea" style="display: none">
+                        <th id="nextNodeTag" >下一环节：</th>
+                        <td>
+                        <span id="nextNodeName">
+                        </span>
+                        </td>
+                    </tr>
+                </table>
+                <div class="page_title"><h1 id="xyhjblrtitle">下一环节办理人</h1></div>
+
+                <div id="xyhjblr" >
+                    <div data-model="ModelBlrList" title="环节办理人"></div>
+                </div>
+            </div>
+            <input type="hidden" id="fj_id"/>
+        </div>
+    </div>
+</form>
+<div class="w_button_box">
+    <input type="button" id="viewFile" value="上传/查看附件" class="c_button"/>
+    <input type="button" id="sure" value="确定" class="c_button"/>
+</div>
+
+<script type="text/javascript">
+    RX.load({
+        template: "form",
+        module: ["datagrid", "gridModel",
+            "/medias/src/plat/code/workflow/instance/handleSubmit.js"
+        ]
+    })
+</script>
+</body>
+</html>

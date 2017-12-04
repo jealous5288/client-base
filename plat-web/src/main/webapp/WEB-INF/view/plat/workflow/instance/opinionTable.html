@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            template: "platMain",
+            module: ["/medias/style/plat/workflow/myStyle.css"]
+        });
+    </script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<table border="0" id="clqk" class="bottomPanelTable" width="100%">
+    <col width="25%"/>
+    <col/>
+    <col width="25%"/>
+    <col width="20%"/>
+    <tr>
+        <th>处理人</th>
+        <th>处理意见</th>
+        <th>处理时间</th>
+        <th>附件数</th>
+    </tr>
+    <tr>
+        <td class="tableContent" colspan="4" style="background-color: #e9e9e9">
+            <div class="tableContentInnerDiv">
+                <table border="0" width="100%" class="tableContentInnerTable">
+                    <col width="25%"/>
+                    <col/>
+                    <col width="25%"/>
+                    <col width="20%"/>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+    //查看附件
+    function lookAttachment(uuid) {
+        window.parent.lookAttachment(uuid);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>字典项编辑页面</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({template: "platMain"});
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<div class="form_box">
+    <div>
+        <table class="form" border="0" cellspacing="0" cellpadding="0">
+            <caption>
+                <div class="page_title">
+                    <h1>字典项信息</h1>
+                </div>
+            </caption>
+            <tr>
+                <th><b>*</b>字典项编码</th>
+                <td><input type="text" class="i_text" data-model="ModelSubDict" data-property="code"/></td>
+            </tr>
+            <tr>
+                <th><b>*</b>字典项值</th>
+                <td><input type="text" class="i_text" data-model="ModelSubDict" data-property="value"/></td>
+            </tr>
+            <tr>
+                <th>上级字典项编码</th>
+                <td id="pcode">
+                    <select class="i_select" data-model="ModelSubDict" data-property="pcode"/>
+                    <option value=""></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><b>*</b>排序号</th>
+                <td><input type="text" class="i_text" data-model="ModelSubDict" data-property="sort"/></td>
+            </tr>
+            <tr>
+                <th>字典项扩展</th>
+                <td><input type="text" class="i_text" data-model="ModelSubDict" data-property="remark"/></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- 下面按钮 -->
+<div class="w_button_box">
+    <input type="button" id="confirm" value="保存" class="c_button"/>
+</div>
+<script type="text/javascript">
+    RX.load({
+        template: "form",
+        module: ["/medias/src/plat/conf/dictionary/subDictEdit_config.js",
+            "/medias/src/plat/code/dictionary/subDictEdit.js"]
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <title>结束环节</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            module: ["operamasks", "zTree",
+                "/medias/style/plat/workflow/flow.css",
+                "/medias/style/plat/workflow/myStyle.css",
+                "/medias/style/plat/workflow/flowPropertyEdit.css"]
+        });
+    </script>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .om-widget-content {
+            border: none;
+        }
+
+        .om-tabs .om-tabs-panels .om-panel-body {
+            padding-top: 5px;
+        }
+
+        .om-dialog .om-dialog-buttonpane {
+            padding-top: 0;
+        }
+
+        div.flowTab {
+            height: 443px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        textarea.Textareb {
+            height: 220px
+        }
+
+        .fieldset {
+            padding: 5px 0;
+        }
+
+        .popWinTree {
+            height: 330px
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div id="center-tab">
+    <ul>
+        <li><a href="#tab2">说明</a></li>
+    </ul>
+
+    <div id="tab2">
+        <textarea class="Textareb" name="description" id="description"></textarea>
+    </div>
+</div>
+
+<div class="buttons">
+    <div>
+        <input type="submit" value="确定" class="ombtn" id="save"/>
+        <input type="button" value="取消" class="ombtn" id="cancel"/>
+    </div>
+</div>
+<script type="text/javascript">
+    RX.load({
+        module: ["jquery", "json2", "operamasks",
+            "zTree", "flowProp",
+            "/medias/src/plat/code/workflow/designTools/end_node.js"
+        ]
+    });
+</script>
+</body>
+</html>

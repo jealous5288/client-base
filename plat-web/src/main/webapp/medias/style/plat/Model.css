@@ -1,0 +1,384 @@
+﻿/*错误提示*/
+.WdateFmtErr {
+    font-weight: bold;
+    color: red;
+}
+
+.TextBoxErr {
+    color: #333;
+    border: 1px solid #ff0000 !important;
+    background: #fff;
+}
+
+.TableBoxErr {
+    border: 1px solid #ff0000
+}
+
+.SelectErr {
+    border: 1px solid #ff0000;
+    background: #fff url('/medias/images/plat/warn.png') no-repeat right center;
+}
+
+/*rx分页*/
+.rx-paging {
+    float: right;
+    width: auto;
+    margin-top: 5px;
+    margin-right: 5px
+}
+
+.rx-pagenate {
+    display: block;
+    width: 270px;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.rx-pagenate li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    text-align: center;
+    padding: 0;
+    width: 20px;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 5px;
+    background-color: #fff;
+}
+
+.rx-pagenate li.rx-frist, .rx-pagenate li.rx-last {
+    border: 1px #a7b3b7 solid;
+    vertical-align: top;
+}
+
+.rx-pagenate li.rx-last {
+    margin-right: 0;
+}
+
+.rx-pagenate li.rx-prev {
+    width: 42px;
+    border: 1px #a7b3b7 solid;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    overflow: hidden;
+}
+
+.rx-pagenate li.rx-next {
+    width: 42px;
+    border: 1px #a7b3b7 solid;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    overflow: hidden;
+}
+
+.rx-pagenate li.rx-pagecurrent {
+    width: 26px;
+    border: 1px #a7b3b7 solid;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    overflow: hidden;
+}
+
+.rx-paging span.page-input {
+    padding: 1px;
+}
+
+.rx-paging span.page-input > input {
+    padding: 0;
+    width: 26px;
+!important;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    margin-right: 5px;
+}
+
+.rx-paging span.page-input > button {
+    padding: 0;
+    width: 26px;
+!important;
+    height: 25px;
+    font-size: 12px;
+    text-align: center;
+    color: #000000
+}
+
+.rx-pagenate li.rx-pageRoll {
+    width: auto;
+}
+
+.rx-pRoll {
+    width:  213px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.rx-pRollUl {
+    display: block;
+    width: 100000px;
+    text-align: left;
+}
+
+.rx-pRollUl li {
+    width: 24px;
+    border: 1px #a7b3b7 solid;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    overflow: hidden;
+}
+
+.rx-pagenate li.hover {
+    background-color: #3b7dd6;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #336699
+}
+
+.rx-pagenate li.clicked {
+    background-color: #3b7dd6;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #336699
+}
+
+.rx-pagenate li.disabled {
+    color: #999999;
+    cursor: not-allowed;
+    background-color: #ffffff;
+    border-color: #dddddd;
+}
+
+.rx-pagenate li.runDisabled {
+    color: #999999;
+    cursor: not-allowed;
+    background-color: #ffffff;
+    border-color: #dddddd;
+}
+
+.runDisabled {
+    color: #999999;
+    cursor: not-allowed;
+    background-color: #ffffff;
+    border-color: #dddddd;
+}
+
+/*底部伸缩panel*/
+.bottomTips {
+    position: absolute;
+    bottom: 0;
+    z-index: 200;
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    background-color: #add1f6;
+    color: #444444;
+    text-align: center;
+}
+
+.bottomTipsHover {
+    background-color: #9bc7f5;
+    color: #444444;
+    cursor: pointer
+}
+
+.bottomPanel {
+    position: absolute;
+    bottom: 26px;
+    z-index: 100;
+    width: 100%;
+    height: 195px;
+    overflow: auto;
+    background: #eaeaea url('/medias/images/plat/bottomPanelBg.png') repeat-x;
+}
+
+.bottomPanelTable {
+    border: 1px #adadad solid;
+    height: 190px;
+    width: 100%;
+    margin-top: 3px;
+    font-size: 12px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.bottomPanelTable th {
+    height: 22px;
+    background-color: #e1e1e1;
+    border-bottom: 1px #adadad solid;
+}
+
+.tableContent {
+    height: 150px;
+}
+
+.tableContentInnerDiv {
+    height: 150px;
+    overflow: auto;
+}
+
+.tableContentInnerTable {
+    margin: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.tableContentInnerTable tr td {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-bottom: 1px #adadad dashed;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.Generallist tr.selectRow {
+    background-color: #ffefae;
+    font-weight: normal;
+    cursor: pointer
+}
+
+.Generallist tr.disabledRow {
+    font-style: oblique;
+    cursor: not-allowed;
+    background-color: #BFBCBC
+}
+
+.hideElement {
+    display: none !important;
+}
+
+.outTwrap {
+    width: auto;
+    height: auto;
+}
+
+/*table类附件样式*/
+.attachmentForm {
+    width: 100%;
+    _width: auto;
+    background: #fff;
+    border-collapse: collapse;
+}
+
+.attachmentForm tr {
+    background: #fff
+}
+
+.attachmentForm tr th {
+    height: 32px;
+    line-height: 20px;
+    color: #333333;
+    text-align: center;
+    background: #f2f2f2 !important;
+    font-weight: normal;
+    border: 1px solid #d5d5d5 !important;
+}
+
+.attachmentForm tr td {
+    height: 25px;
+    line-height: 20px;
+    color: #333;
+    background: #fff;
+    border: 1px solid #d5d5d5 !important;
+    text-align: left;
+    padding: 2px 5px 2px 3px;
+    _padding: 2px 5px 2px 3px;
+}
+
+.attachmentForm tbody tr.hover {
+    cursor: pointer;
+    background-color: #FFF8D9
+}
+
+.attachmentForm tr td a {
+    color: #0056cc
+}
+
+.attachmentForm tr td a:hover {
+    text-decoration: underline
+}
+
+.attachmentForm tr th a {
+    color: blue;
+    text-decoration: underline
+}
+
+/*file容器样式*/
+span.files {
+    width: 84px;
+    height: 29px;
+    overflow: hidden;
+    display: block;
+    background: url(/medias/images/plat/attachment/addFj.gif) left top no-repeat;
+    text-decoration: none;
+}
+
+/*span.files:hover {*/
+    /*background-position: 0 -20px;*/
+/*}*/
+
+/*file设为透明，并覆盖整个触发面*/
+span.files input {
+    margin-left: -350px;
+    font-size: 30px;
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+/*取消点击时的虚线框*/
+.files, span.files input {
+    outline: none; /*ff*/
+    hide-focus: expression(this.hideFocus=true); /*ie*/
+}
+
+/*弹出层底部按钮Class*/
+.w_button_box{position:absolute;left: 0;bottom:0;width:100%;height:46px;text-align:right;
+    border-top:1px solid #d2d7da;line-height:46px;background:#eff4fa}
+.w_button_box input.button{border:1px solid #b6b9be;width:auto;height:30px;line-height:28px;color:#383838;
+    background:#fbfbfb;cursor:pointer;font-size:12px;margin-top:6px;font-weight:normal;font-family:Microsoft Yahei;margin-right:10px;padding:0 34px;_padding:0 17px;border-radius:2px}
+.w_button_box input.c_button{border:1px solid #2667c2;width:auto;height:30px;line-height:28px;color:#fff;
+    background:#2e8ded;cursor:pointer;font-size:12px;margin-top:6px;font-weight:normal;font-family:Microsoft Yahei;margin-right:10px;padding:0 34px;_padding:0 17px;border-radius:2px}
+.w_button_box input.c_button:hover{ background:#3b7cd6 ; }
+.w_button_box input.button:hover{ background:#cccccc; }
+
+/*数据选中样式*/
+.form tbody tr.selectRow{background-color:#ffefae;font-weight:normal;cursor:pointer}
+.form tbody tr.selectRow td{background-color:#ffefae;font-weight:normal;cursor:pointer}
+
+
+.return{
+    width: 48px;
+    height: 48px;
+    background: url("img/return.png");
+}
+
+/*list附件类型样式*/
+.attachmentbox2{width: 100%;border: 1px solid #D8D8D8;border-bottom: 0 none;border-radius: 2px;}
+.attachment_header{width: 100%;height: 28px;line-height: 20px;border-bottom: 1px solid #D8D8D8;background: #f4f4f4;cursor: pointer;}
+.attachment_header h1{float: left;font-size: 14px;color: #444444;margin-left: 10px; font-weight: normal; }
+.attachment_header h1 em{color: #6e6e6e;font-weight: normal;margin-left: 3px;}
+.attachment_header a{float: right;margin: 10px 10px 0 0;}
+.attachment_header a img{width: 16px;height: 9px;}
+.attachmentcontent2{width: 100%;height: auto;border-bottom: 1px solid #D8D8D8;position: relative;}
+.Downloadthumbnail{float: left;}
+.Downloadthumbnail li{float: left;display: inline;margin: 10px 10px;position:relative;}
+.Downloadthumbnail li a{float: left;display: block;color: #333 !important;font-size: 12px;text-align: center;width: 115px;height: 145px;border: 1px solid #fff;text-decoration: none;padding: 0 5px;overflow: hidden;}
+.Downloadthumbnail li a img{display: block;margin: 8px auto 4px;width: 70px;height: 75px;}
+.Downloadthumbnail li a:hover{border: 1px solid #d7d7d7;background: #f0f0f0;text-decoration: none;}
+.clear{clear: both;}
+.tcccz{width: 100%;float: left;margin: 0 17px;}
+.tcccz i{float: left;font-size: 16px;color: #619ee5;margin: 0 5px;}
+.tcccz i:hover{color: #2068bd;}

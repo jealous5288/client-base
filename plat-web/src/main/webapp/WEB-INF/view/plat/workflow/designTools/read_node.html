@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <title>属性编辑</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script type="text/javascript">
+        RX.loadCSS({
+            module: ["/medias/style/plat/workflow/flow.css", "operamasks",
+                "/medias/style/plat/workflow/myStyle.css", "zTree"]
+        });
+    </script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .om-widget-content {
+            border: none;
+        }
+
+        .om-tabs .om-tabs-panels .om-panel-body {
+            padding-top: 5px;
+        }
+
+        .om-dialog .om-dialog-buttonpane {
+            padding-top: 0;
+        }
+
+        div.flowTab {
+            height: 443px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        textarea.Textareb {
+            height: 340px
+        }
+
+        .fieldset {
+            width: 98%;
+            border: 1px solid #d5dfe5;
+            display: block;
+            margin: 0px auto;
+            padding: 5px 0;
+            margin-bottom: 5px;
+        }
+
+        .fieldset legend {
+            color: #15428b;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+<table border="0" cellborder="0" cellspance="0" class="titleBar">
+    <col width="60px"/>
+    <col/>
+    <tr>
+        <th>活动名称</th>
+        <td><input type="text" value="" id="titleText"/></td>
+    </tr>
+</table>
+
+<div id="center-tab" style="border:none">
+    <ul>
+        <li><a href="#tab1">选择办理人</a></li>
+        <!--<li><a href="#tab2">时限与办理人</a></li>-->
+        <li><a href="#tab6">流程变量</a></li>
+        <li><a href="#tab3">前处理</a></li>
+        <li><a href="#tab4">后处理</a></li>
+        <li><a href="#tab5">环节序号</a></li>
+    </ul>
+
+    <div id="tab1" class="flowTab" style="padding:0;">
+        <fieldset class="fieldset" style="width:98%;margin:0 auto;">
+            <legend>环节办理人</legend>
+            <table cellpadding="0" cellspacing="0" border="0" class="infoTable_gzl" style="width: auto;">
+                <col width="120px"/>
+                <col width="150px"/>
+                <tr>
+                    <th>本环节的办理人为：</th>
+                    <td><input type="text" class="TextBoxa readonly" id="transactUser"/></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="fieldset" style="height:290px;width:98%;margin:5px auto;padding-top:5px;" id="read">
+            <legend>生成环节办理人</legend>
+            <iframe frameborder="0" class="colony_iframe" id="transactUser_ifr"></iframe>
+        </fieldset>
+    </div>
+
+    <div id="tab3">
+        <fieldset class="fieldset">
+            <legend>前处理程序操作</legend>
+            <textarea class="Textarea" name="startupProcessSql" id="startupProcessSql" cols="20" rows="2"
+                      style="height:155px;"></textarea>
+        </fieldset>
+    </div>
+
+    <div id="tab4">
+        <fieldset class="fieldset">
+            <legend>后处理程序操作</legend>
+            <textarea class="Textarea" name="finishProcessSql" id="finishProcessSql" cols="20" rows="2"
+                      style="height:155px;"></textarea>
+        </fieldset>
+    </div>
+
+    <div id="tab5">
+        <input class="TextBoxa" name="nodeSort" id="nodeSort"/>
+    </div>
+
+    <div id="tab6">
+        <fieldset class="fieldset">
+            <legend>修改流程变量</legend>
+            <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;margin: 10px 0;">
+                <tr>
+                    <th>选择流程变量：</th>
+                    <td><input type="text" class="TextBoxa" id="varName"/></td>
+                    <td><input class="button" type="button" id="saveVar" value="添加"/></td>
+                </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" border="0" class="list">
+                <col width="40%"/>
+                <col width="40%"/>
+                <col/>
+                <tr>
+                    <th>变量名</th>
+                    <th>值</th>
+                    <th>操作</th>
+                </tr>
+                <tbody id="vars">
+
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+</div>
+
+<div class="buttons">
+    <div>
+        <input type="submit" value="保存" class="ombtn" id="save"/>
+        <input type="button" value="取消" class="ombtn" id="cancel"/>
+    </div>
+</div>
+<script type="text/javascript">
+    RX.load({
+        module: ["jquery", "jqueryJson", "zTree", "operamasks", "flowProp",
+        "/medias/src/plat/code/workflow/designTools/read_node.js"]
+    })
+</script>
+</body>
+</html>

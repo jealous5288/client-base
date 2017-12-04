@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>首页</title>
+    <script src="${ctxPath}/medias/RX.load.js"></script>
+    <script>
+        $(function () {
+            $.MyCommon.PageLoading({ sleep: 200});
+        })
+    </script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        RX.loadCSS({
+            module: [
+                "/medias/plugin/htui/css/public.css",
+                "/medias/style/plat/Left.css",
+                "/medias/plugin/loading/msgbox.css"]
+        });
+        RX.load({
+            template: "form",
+            module: [["msgbox",  'layerExtend', "cookie"],
+                "/medias/src/plat/code/main/index.js"]
+        });
+    </script>
+</head>
+<body>
+<div id="dcWrap">
+    <div id="dcHead">
+        <div id="head">
+            <div class="logo"><a href='leftMenu' target="MainIframe"><img basesrc="/medias/style/images/baseModel/htlogo.jpg" alt="logo"></a></div>
+            <div class="nav">
+                <ul id="topMenu">
+                </ul>
+                <ul class="navRight">
+                    <li class="M noLeft"><a href="JavaScript:void(0);">您好，${username}</a>
+                        <div class="drop mUser">
+                            <a href="javascript:void(0)" onclick="_top.ZENG.msgbox.show('123123',6,2000);">编辑我的个人资料</a>
+                            <a href="javascript:void(0)">设置云账户</a>
+                        </div>
+                    </li>
+                    <li class="noRight"><a href="${ctxPath}/logout">安全退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <iframe name="MainIframe" id="leftMenu" frameborder="0" width="100%" height="100%" scrolling="auto"
+                src="leftMenu.html"></iframe>
+    </div>
+</div>
+</body>
+</html>
